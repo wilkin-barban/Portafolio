@@ -1,0 +1,39 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-web
+    expose:
+      - "80"
+    environment:
+      - NODE_ENV=production
+      - PORT=80
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: portfolio-nginx
+    depends_on:
+      - portfolio
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/default.http.conf:/etc/nginx/templates/default.http.conf:ro
+      - ./nginx/default.https.conf:/etc/nginx/templates/default.https.conf:ro
+      - ./nginx/select-config.sh:/docker-entrypoint.d/40-select-ssl-config.sh:ro
+      - certbot-www:/var/www/certbot:ro
+      - letsencrypt:/etc/letsencrypt:ro
+    restart: unless-stopped
+
+  certbot:
+    image: certbot/certbot:latest
+    profiles: ["ssl"]
+    volumes:
+      - certbot-www:/var/www/certbot
+      - letsencrypt:/etc/letsencrypt
+
+volumes:
+  certbot-www:
+  letsencrypt:
