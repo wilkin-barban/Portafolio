@@ -135,13 +135,18 @@ app.get("*", (_req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
 
-const server = app.listen(port, () => {
-  console.log(`Portfolio running at http://localhost:${port}`);
-});
-
-// Cierre graceful
-process.on("SIGTERM", () => {
-  server.close(() => {
-    console.log("Servidor Express cerrado limpiamente (SIGTERM)");
+let server = null;
+if (require.main === module) {
+  server = app.listen(port, () => {
+    console.log(`Portfolio running at http://localhost:${port}`);
   });
-});
+
+  // Cierre graceful
+  process.on("SIGTERM", () => {
+    server.close(() => {
+      console.log("Servidor Express cerrado limpiamente (SIGTERM)");
+    });
+  });
+}
+
+module.exports = app;

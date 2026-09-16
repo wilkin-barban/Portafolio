@@ -59,9 +59,10 @@ El proyecto incluye soporte multilenguaje reactivo, visualizador interactivo de 
    npm install
    ```
 
-2. **Verificar sintaxis e integridad del código:**
+2. **Verificar sintaxis y ejecutar pruebas automatizadas:**
    ```bash
    npm run check
+   npm test
    ```
 
 3. **Iniciar el servidor en modo desarrollo:**
