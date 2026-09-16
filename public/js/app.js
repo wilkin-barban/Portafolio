@@ -2,14 +2,14 @@
 
 const contactLinks = [
   { label: { es: "GitHub", en: "GitHub", pt: "GitHub" }, icon: "GH", href: "https://github.com/wilkinbarban/" },
-  { label: { es: "Correo", en: "Email", pt: "E-mail" }, icon: "@", href: "mailto:wilkin.barban@yahoo.com" },
+  { label: { es: "Correo", en: "Email", pt: "E-mail" }, icon: "@", href: "mailto:wilkin.barban@gmail.com" },
   { label: { es: "LinkedIn", en: "LinkedIn", pt: "LinkedIn" }, icon: "IN", href: "https://www.linkedin.com/in/wilkin-barban-rosabal" },
   { labelKey: "action_support_project", icon: "$", action: "support" }
 ];
 
 const supportTargets = {
   wise: "https://wise.com/pay/me/wilkinb3",
-  pix: "wilkin.barban@yahoo.com"
+  pix: "wilkin.barban@gmail.com"
 };
 
 const assetVersion = "20260526-3";
