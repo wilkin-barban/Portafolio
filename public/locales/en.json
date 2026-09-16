@@ -1,0 +1,377 @@
+{
+  "meta": {
+    "title": "Wilkin | Software developer",
+    "description": "Professional portfolio for a software developer focused on automation, Node.js, Python, web applications, and freelance solutions.",
+    "languageSelector": "Language selector"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "eyebrow": "Software developer · Automation · Freelance",
+    "title": "Wilkin, software developer focused on real-world solutions.",
+    "text": "I build productivity tools, automation workflows, and clean web experiences that turn complex processes into simple, fast, reliable systems.",
+    "primary": "Let's talk",
+    "secondary": "View projects",
+    "cardAria": "Professional summary",
+    "cardLabel": "Available for",
+    "cardTitle": "Automation, web applications, and custom tools",
+    "stats": {
+      "skills": "skills",
+      "projects": "projects",
+      "services": "freelance areas"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A path of adaptation, learning, and execution.",
+    "paragraphs": [
+      "I am a Cuban software developer currently based in Curitiba, Brazil, under refugee status. My path is a story of constant adaptation and evolution: from professional logistics management to building complex digital solutions.",
+      "I specialize in process automation and developing applications that solve real problems. My approach combines programming logic with a self-taught ability to master tools such as Python and Node.js.",
+      "I have built software utilities focused on real productivity, optimizing tasks from media normalization to intelligent file management.",
+      "I strongly believe technology is my best language for creating value in any environment."
+    ],
+    "timeline": [
+      "Spot repetitive processes and turn them into systems.",
+      "Design simple, maintainable tools that are useful from day one.",
+      "Iterate with real data, clear documentation, and a product mindset."
+    ]
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "A technical stack focused on productivity, automation, and product work.",
+    "list": [
+      "Python",
+      "Node.js",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Docker",
+      "Linux",
+      "GitHub",
+      "APIs",
+      "FFmpeg",
+      "Tkinter",
+      "UI/UX",
+      "Automation",
+      "Basic SEO",
+      "i18n / L10n"
+    ]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Tools built for real needs.",
+    "intro": "Tools I built to solve real problems in my day-to-day work. Each project started from a personal need and was developed for learning and technical growth. The code is open, the solutions are functional, and I am always open to improvements, fixes, and collaboration.",
+    "open": "View details",
+    "repo": "Repository",
+    "release": "Latest version",
+    "gallery": "Screenshots",
+    "noImages": "No screenshots yet. Add images to",
+    "solves": "Problem it solves",
+    "does": "What it does",
+    "projects": [
+      {
+        "name": "YouTube Downloader",
+        "subtitle": "Advanced video and audio downloader",
+        "description": "Windows desktop application built with Python and PyQt6 to manage YouTube downloads (video, playlists, and audio), including concurrent queueing, history, logs, clipboard monitoring, and an asynchronous FastAPI/WebSocket web manager.",
+        "does": "Downloads single videos, playlists, and audio, supports up to 3 concurrent downloads, detects links from the clipboard, integrates FFmpeg, and exposes a local web manager at http://127.0.0.1:8000 with real-time progress.",
+        "problem": "It solves the need to download educational material, references, or personal resources in an organized, repeatable way with a stable GUI that manages queues automatically.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Many downloaders are unstable, limited in formats, or lack queue management. Downloading long playlists or specific formats repetitively is time-consuming and error-prone."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "Developed a Python app with PyQt6 and yt-dlp. It integrates FFmpeg, background workers, clipboard monitoring, and a modern FastAPI/WebSocket web manager for local remote control."
+            },
+            {
+              "title": "Result",
+              "text": "A robust and automated experience that reduces operational time, allowing users to download full playlists and extract audio easily, with an automatic Windows installer."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "🚀 Recommended method (.exe): Download YouTubeDownloader.exe from the latest release. It includes the required runtime and bundled portable FFmpeg, ideal for non-technical users.",
+            "⚡ Scriptable install (PowerShell): Run install.ps1 with the one-click command to download the official repository, verify it, prepare .venv, install requirements.txt, and launch the app."
+          ],
+          "stepsTitle": "Alternative installation",
+          "steps": [
+            "Clone the repository or download the official ZIP.",
+            "Open the project folder in Windows.",
+            "Run Iniciar.bat to validate Python, create .venv, install dependencies, and launch the interface."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/youtube-downloader/main/install.ps1 | iex"
+        }
+      },
+      {
+        "name": "Audio Normalizer",
+        "subtitle": "Smart audio normalization",
+        "description": "Windows desktop application that normalizes video batch loudness with FFmpeg loudnorm (LUFS), reference profiles, before/after reports, configurable parallel processing, and local user configuration outside the repository.",
+        "does": "Analyzes videos, applies LUFS presets for YouTube, Netflix, Spotify, Podcast, or Custom mode, generates reference profiles, shows waveform previews, exports CSV/TXT reports, and can use GPU acceleration with CPU fallback.",
+        "problem": "It avoids manually reviewing and editing large audio collections where each file has a different volume level, leading to slow and error-prone adjustments.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "In video collections, volume inconsistency and the need for standardized LUFS parameters create repetitive workflows and a poor final experience."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "Built an application with Python, PyQt6, and FFmpeg that automates loudnorm (LUFS) normalization. It includes presets, a reference-profile workflow, configurable parallel processing, GPU detection, waveform visualization, and traceable reports."
+            },
+            {
+              "title": "Result",
+              "text": "An efficient normalization workflow with I, LRA, and TP reports, drastically speeding up batch video processing with a multilingual interface (ES/EN/PT)."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "🚀 Official PowerShell install: Run the one-click command based on install.ps1. It is the only official remote one-click installation flow.",
+            "⚡ The installer downloads the repository when needed, validates the archive, creates or reuses .venv, installs requirements.txt, checks Python/FFmpeg, and launches the app."
+          ],
+          "stepsTitle": "Alternative installation",
+          "steps": [
+            "Optionally set $env:NORM_INSTALL_DIR to change the installation folder.",
+            "Run the one-click PowerShell command.",
+            "Add videos, select a preset or reference profile, choose the output folder, and review the generated reports."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/normalizador-audio/main/install.ps1 | iex"
+        }
+      },
+      {
+        "name": "Photo Dedup",
+        "subtitle": "Duplicate photo detector and remover",
+        "description": "PhotoDedup helps clean large photo libraries without blind deletion. It analyzes files, groups likely duplicates, and lets you visually decide which photo to keep, with Lite and Full editions.",
+        "does": "Detects exact duplicates by size/hash, visual similarity with perceptual hashes, AI-assisted comparison in PhotoDedup-full.exe, Google Takeout metadata integration, group review, and safe actions to the Recycle Bin or a target folder.",
+        "problem": "It solves the disorganization of large photo libraries where duplicates change names, sizes, or compression, consuming space and making management difficult.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Photo folders grow with nearly identical copies and exports. Manual filtering takes too much time and lacks safe, reviewable controls."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "A PyQt6 tool was built with size/hash analysis, perceptual hashes, local cache, Google Takeout support, and optional AI assistance in the Full edition. The Lite edition keeps a lighter workflow without heavyweight AI dependencies."
+            },
+            {
+              "title": "Result",
+              "text": "Significantly faster library cleanup with recoverable-space statistics, maintaining total control over which images to keep without losing relevant media."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "🚀 Recommended download: Use the latest official release and choose PhotoDedup-lite.exe for fast hash/visual cleanup or PhotoDedup-full.exe for deeper analysis with optional AI.",
+            "⚡ One-command installation: Run install.ps1 from PowerShell. Outside the project it downloads and validates the repository; inside the project it validates Python 3.14.x, prepares .venv, installs dependencies, and opens PhotoDedup."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Download the latest release from Releases or use the one-click PowerShell command.",
+            "Choose PhotoDedup-lite.exe for the hash/visual workflow or PhotoDedup-full.exe for AI-assisted analysis.",
+            "For an already downloaded or cloned copy, run Iniciar.bat. If SmartScreen warns, use 'More info' and 'Run anyway' only if you trust the official release."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "powershell -ExecutionPolicy Bypass -Command \"iwr -UseBasicParsing https://raw.githubusercontent.com/wilkinbarban/photo-dedup/main/install.ps1 | iex\""
+        }
+      },
+      {
+        "name": "LiveChat Pro",
+        "subtitle": "Self-hosted live chat with web admin and Telegram",
+        "description": "LiveChat Pro is a self-hosted live chat with an embeddable widget, Telegram integration, a web admin panel, SQLite persistence, visitor metrics, automatic translation, and Docker as the recommended deployment path.",
+        "does": "Adds chat to any website with one script, keeps persistent visitor sessions, forwards messages to Telegram and /admin, supports replies from both channels, and translates messages between visitor and admin languages.",
+        "problem": "It solves the need for direct support on small websites without relying on expensive external platforms, while preserving full control over infrastructure and data.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Small websites need fast, direct support, but many support suites are costly, heavy, and reduce operational control over data and deployment."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "A self-hosted architecture was built with an embeddable widget, Telegram bot integration, /admin web panel, persistent per-visitor sessions, operational metrics (IP, geolocation, language, user-agent), and automatic translation between languages."
+            },
+            {
+              "title": "Result",
+              "text": "The result is a lightweight and easy-to-deploy support channel that centralizes conversations in Telegram and the admin panel, improving response flow while avoiding vendor lock-in."
+            }
+          ],
+          "installTitle": "Installation method",
+          "methods": [
+            "🚀 Recommended (VPS + Docker): Make sure the node command exists, run node setup.js, and choose Public VPS with Docker to publish on HOST_PORT=8080.",
+            "⚡ setup.js validates Node.js >= 24 and npm; if the initial version is old, it attempts to upgrade to Node.js 24 on supported distributions.",
+            "🛠️ Local or without Docker: install dependencies with npm, run setup.js, and start server.js; optionally keep it online with PM2."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Install an initial Node.js package if the server does not provide the node command.",
+            "Create your Telegram bot in BotFather and obtain TELEGRAM_TOKEN and TELEGRAM_ADMIN_ID.",
+            "Run the installation command, choose Public VPS with Docker or local mode, set domain/allowed origins, and paste the generated widget.js script into the external website."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "git clone https://github.com/wilkinbarban/LiveChat-Pro.git && cd LiveChat-Pro && node setup.js"
+        }
+      },
+      {
+        "name": "WSL Manager Pro",
+        "subtitle": "Professional WSL (Windows Subsystem for Linux) Manager",
+        "description": "Windows desktop application that centralizes WSL management: list distributions, install from an online catalog or rootfs, import/export, post-install provisioning, resource limits via .wslconfig, and maintenance utilities. Built with Python 3.14+, PySide6/Qt 6, and QThread.",
+        "does": "Lists distributions, installs from online catalog or rootfs, imports/exports distros, configures post-install provisioning (user account, packages, wsl.conf), applies resource limits via .wslconfig, and executes maintenance utilities.",
+        "problem": "It solves the complexity of managing WSL from the command line by centralizing all installation, configuration, and maintenance operations for Linux distributions into a graphical interface.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Managing WSL from the command line requires knowing multiple commands, scripts, and scattered configurations. Installing distributions, configuring resources, or performing maintenance involves repetitive, error-prone manual processes."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "A desktop application was built with Python, PySide6, and Qt 6 that centralizes all WSL management in an intuitive graphical interface. It includes a catalog of 9 distributions, resumable downloads, a 5-step installation wizard, automated post-install provisioning, visual .wslconfig configuration, and import/export utilities with background workers."
+            },
+            {
+              "title": "Result",
+              "text": "A comprehensive tool that drastically reduces WSL setup time, allows one-click distro installation, automates initial provisioning, and offers full control over system resources — all from a modern, multilingual interface (EN/ES/PT)."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "🚀 One-click PowerShell installation and launch: Run install.ps1 from the master branch to download the official ZIP, extract it to the Desktop, and prepare the environment without requiring Git.",
+            "⚡ Easy local execution: If you already have the repository or ZIP, run Iniciar.bat to detect Python 3.14+, create .venv, install requirements, and open the GUI."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Run the one-click PowerShell command on Windows 10/11.",
+            "Allow the WSL and Python 3.14+ checks; the installer may use winget and request elevation if it needs to enable WSL.",
+            "For manual installation, download/clone the repo, create .venv, install requirements.txt, and run python main.py."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/WSL-Manager-Pro/master/install.ps1 | iex"
+        }
+      },
+      {
+        "name": "AI Workspace Manager",
+        "subtitle": "Local control center for audits, memory, and AI tasks",
+        "description": "Local application for auditing, documenting, and improving software projects with AI assistance. It scans local folders, detects technologies, calculates health metrics, preserves chronological memory, records completed tasks, and runs agents with visible diffs.",
+        "does": "Analyzes local workspaces, identifies language, framework, dependencies, README, license, Git, Docker, and tests; calculates a health score, keeps project memory, manages AI-assisted tasks, and estimates token/cost usage by provider, model, and task type.",
+        "problem": "It solves the lack of centralized context when working across multiple projects, reducing manual audits, lost technical memory, and AI-generated changes that are hard to review.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Projects accumulate technical debt, scattered tasks, and decisions that get lost across folders, chats, and commits. Manually auditing each workspace and preparing context for AI takes time and weakens traceability."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "An application was built with Electron, React, TypeScript, Node.js, Prisma, and SQLite. It supports desktop mode on Windows/macOS and headless web mode on Linux/WSL, with a local scanner, chronological memory, configurable AI providers, an internal-tool agent, and a diff viewer."
+            },
+            {
+              "title": "Result",
+              "text": "A local dashboard for measuring technical health, documenting decisions, running AI-assisted tasks, and auditing changes before accepting them, while keeping project data in local SQLite and secrets in secure storage or .env depending on the platform."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "🚀 Windows: Run the PowerShell installer to download main.zip, validate Node.js >= 20 and npm >= 10, install dependencies, prepare Prisma/SQLite, and launch the Electron app.",
+            "⚡ Linux/WSL/macOS: Run install.sh with curl. On Linux/WSL it starts a Node.js backend on localhost:3000 and a Vite frontend on localhost:5173; on macOS it uses Electron in development mode."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Run the installer for your operating system.",
+            "Configure at least one AI provider from the interface or through .env variables in headless mode.",
+            "Add a workspace with an absolute path and review its health score, memory, tasks, and generated diffs."
+          ],
+          "commandTitle": "One-click commands",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "commands": [
+            {
+              "label": "Windows",
+              "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"irm https://raw.githubusercontent.com/wilkinbarban/AI-Workspace-Manager/main/install.ps1 | iex\""
+            },
+            {
+              "label": "Linux, WSL, and macOS",
+              "command": "curl -fsSL https://raw.githubusercontent.com/wilkinbarban/AI-Workspace-Manager/main/install.sh | bash"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Freelance services",
+    "title": "One-off solutions or long-term collaboration.",
+    "intro": "Available for specific projects or long-term collaborations. No-obligation quote.",
+    "list": [
+      {
+        "icon": "PY",
+        "title": "Automation & Scripts",
+        "intro": "Custom tools that eliminate manual tasks, reduce errors, and scale operations without increasing headcount.",
+        "items": [
+          "High-performance Python scripts for bulk processing, data cleaning, and automated pipelines.",
+          "Bots and API integrations for services, notifications, and multi-platform workflows.",
+          "CLI and GUI desktop apps designed for daily operations.",
+          "FFmpeg multimedia workflows for batch conversion, normalization, trimming, and export."
+        ]
+      },
+      {
+        "icon": "L10",
+        "title": "Specialized Services",
+        "intro": "Linguistic and technical solutions for multilingual digital products, from UI localization to codebase internationalization.",
+        "items": [
+          "Software localization for UI, menus, and messages adapted to each language.",
+          "Technical translation ES ↔ PT-BR for documentation, manuals, and digital content.",
+          "App internationalization with JSON, i18next, and scalable structures.",
+          "Transcreation and cultural adaptation to avoid literal, out-of-context translations."
+        ]
+      },
+      {
+        "icon": "KDP",
+        "title": "Amazon Formatting & Publishing",
+        "intro": "Complete editorial preparation for Amazon KDP with professional presentation, high compatibility, and optimized positioning.",
+        "items": [
+          "KDP layout for eBook and print with professional structure.",
+          "Validated EPUB and MOBI conversion for multiple devices.",
+          "Cover optimization according to Amazon specifications.",
+          "Metadata and SEO to improve organic catalog visibility."
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Do you have an idea, process, or product that needs to become software?",
+    "text": "Tell me what you want to automate, improve, or publish. We can start with a simple diagnosis and turn it into an executable plan."
+  },
+  "support": {
+    "action_support_project": "Support the project",
+    "support_title": "Support the developer",
+    "support_heading": "💙 Support the developer",
+    "support_message": "If my work, tools, or portfolio have been useful to you, you can support the developer behind them so I can keep building applications, projects, and practical solutions.",
+    "support_note": "✨ Your support helps me dedicate more time to new ideas, improvements, and maintenance.",
+    "support_target": "🔗 Payment link (Wise): {target}",
+    "support_scan_hint": "📱 Scan the QR code or use the action button.",
+    "support_open": "Open payment link",
+    "support_copy": "Copy link",
+    "support_link_copied": "Payment link copied to the clipboard.",
+    "support_qr_error": "The QR code could not be generated right now.",
+    "support_close": "Close"
+  }
+}

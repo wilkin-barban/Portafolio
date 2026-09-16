@@ -1,0 +1,44 @@
+[
+  {
+    "id": "youtube-downloader",
+    "icon": "VD",
+    "folder": "Youtube_Downloader",
+    "repo": "https://github.com/wilkinbarban/youtube-downloader",
+    "release": "https://github.com/wilkinbarban/youtube-downloader/releases/latest"
+  },
+  {
+    "id": "normalizador-audio",
+    "icon": "AU",
+    "folder": "Normalizador_Audio",
+    "repo": "https://github.com/wilkinbarban/normalizador-audio",
+    "release": "https://github.com/wilkinbarban/normalizador-audio/releases/latest"
+  },
+  {
+    "id": "photo-dedup",
+    "icon": "PH",
+    "folder": "Photo_Dedup",
+    "repo": "https://github.com/wilkinbarban/photo-dedup",
+    "release": "https://github.com/wilkinbarban/photo-dedup/releases/latest"
+  },
+  {
+    "id": "livechat-pro",
+    "icon": "LC",
+    "folder": "LiveChat_Pro",
+    "repo": "https://github.com/wilkinbarban/LiveChat-Pro",
+    "release": "https://github.com/wilkinbarban/LiveChat-Pro/releases/latest"
+  },
+  {
+    "id": "wsl-manager-pro",
+    "icon": "WS",
+    "folder": "WSL_Manager_Pro",
+    "repo": "https://github.com/wilkinbarban/WSL-Manager-Pro",
+    "release": "https://github.com/wilkinbarban/WSL-Manager-Pro/releases/latest"
+  },
+  {
+    "id": "ai-workspace-manager",
+    "icon": "AI",
+    "folder": "AI_Workspace_Manager",
+    "repo": "https://github.com/wilkinbarban/AI-Workspace-Manager",
+    "release": "https://github.com/wilkinbarban/AI-Workspace-Manager/releases/latest"
+  }
+]
