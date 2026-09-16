@@ -6,12 +6,14 @@ const express = require("express");
 
 const app = express();
 const port = process.env.PORT || 80;
-const publicDir = path.join(__dirname, "..", "public");
+const publicDir = path.resolve(__dirname, "..", "public");
 
 app.disable("x-powered-by");
 
-app.use((req, res, next) => {
+// Cabeceras de seguridad HTTP
+app.use((_req, res, next) => {
   res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "SAMEORIGIN");
   res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   next();
@@ -26,18 +28,41 @@ app.use(
 );
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".svg"]);
-
 const screenshotName = /^captura[_-]?(\d+)\.[^.]+$/i;
+
+// Obtener carpetas de proyectos autorizadas (Whitelist dinámica)
+const getAuthorizedFolders = () => {
+  try {
+    const projectsFile = path.join(publicDir, "data", "projects.json");
+    if (fs.existsSync(projectsFile)) {
+      const projects = JSON.parse(fs.readFileSync(projectsFile, "utf8"));
+      return new Set(projects.map((p) => p.folder).filter(Boolean));
+    }
+  } catch (error) {
+    console.error("Error al leer whitelist de proyectos:", error.message);
+  }
+  return new Set();
+};
 
 app.get("/api/gallery/:project", async (req, res) => {
   const project = req.params.project;
-  const galleryDir = path.join(publicDir, project);
-  const relativeDir = `/${project}`;
+  const authorizedFolders = getAuthorizedFolders();
 
-  if (!galleryDir.startsWith(publicDir)) {
-    res.status(400).json({ images: [] });
+  // Validación contra lista blanca
+  if (!authorizedFolders.has(project)) {
+    res.status(404).json({ images: [], error: "Proyecto no autorizado o no encontrado" });
     return;
   }
+
+  const galleryDir = path.resolve(publicDir, project);
+
+  // Protección estricta contra Path Traversal
+  if (!galleryDir.startsWith(publicDir + path.sep)) {
+    res.status(400).json({ images: [], error: "Ruta de directorio inválida" });
+    return;
+  }
+
+  const relativeDir = `/${encodeURIComponent(project)}`;
 
   try {
     const entries = await fs.promises.readdir(galleryDir, { withFileTypes: true });
@@ -73,30 +98,32 @@ let statsLastFetch = 0;
 
 app.get("/api/stats", async (_req, res) => {
   const now = Date.now();
+  // Retornar de caché si tiene menos de 1 hora
   if (statsCache && now - statsLastFetch < 3600000) {
     return res.status(200).json(statsCache);
   }
-  
+
   try {
     const response = await fetch("https://api.github.com/users/wilkinbarban", {
-      headers: { "User-Agent": "Portfolio-App" }
+      headers: { "User-Agent": "Portfolio-App" },
+      signal: AbortSignal.timeout(5000)
     });
-    
+
     if (!response.ok) {
-      throw new Error("GitHub API failed");
+      throw new Error(`GitHub API error: ${response.status}`);
     }
-    
+
     const data = await response.json();
     statsCache = {
       repos: data.public_repos || 4,
       followers: data.followers || 0
     };
     statsLastFetch = now;
-    
+
     res.status(200).json(statsCache);
   } catch (error) {
     if (statsCache) return res.status(200).json(statsCache);
-    res.status(500).json({ error: "Failed to fetch stats" });
+    res.status(502).json({ error: "Failed to fetch stats from GitHub", details: error.message });
   }
 });
 
@@ -108,6 +135,13 @@ app.get("*", (_req, res) => {
   res.sendFile(path.join(publicDir, "index.html"));
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Portfolio running at http://localhost:${port}`);
+});
+
+// Cierre graceful
+process.on("SIGTERM", () => {
+  server.close(() => {
+    console.log("Servidor Express cerrado limpiamente (SIGTERM)");
+  });
 });
