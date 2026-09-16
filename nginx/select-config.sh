@@ -1,22 +1,40 @@
 #!/bin/sh
-set -eu
+set -e
 
-if [ -f /etc/letsencrypt/live/wilkinbarban.duckdns.org/fullchain.pem ] && [ -f /etc/letsencrypt/live/wilkinbarban.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/trindademasas.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/trindademasas.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-opencode.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-opencode.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-music.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-music.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/casadeasados.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/casadeasados.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-engram.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-engram.duckdns.org/privkey.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-omniroute.duckdns.org/fullchain.pem ] \
-   && [ -f /etc/letsencrypt/live/wilkinbarban-omniroute.duckdns.org/privkey.pem ]; then
-    cp /etc/nginx/templates/default.https.conf /etc/nginx/conf.d/default.conf
+CONF_DIR="/etc/nginx/conf.d"
+SITES_DIR="/etc/nginx/sites-templates"
+
+echo "[nginx-ssl] Iniciando comprobación de configuración SSL..."
+
+if [ -d "$SITES_DIR" ]; then
+    echo "[nginx-ssl] Modo modular detectado en $SITES_DIR"
+    rm -f "$CONF_DIR"/*.conf
+
+    for http_file in "$SITES_DIR"/*.http.conf; do
+        [ -f "$http_file" ] || continue
+
+        filename=$(basename "$http_file")
+        domain="${filename%.http.conf}"
+        https_file="${SITES_DIR}/${domain}.https.conf"
+
+        cert="/etc/letsencrypt/live/${domain}/fullchain.pem"
+        key="/etc/letsencrypt/live/${domain}/privkey.pem"
+
+        if [ -f "$cert" ] && [ -f "$key" ] && [ -f "$https_file" ]; then
+            echo "[nginx-ssl] ✓ ${domain}: Certificados presentes -> Activando HTTPS"
+            cp "$https_file" "${CONF_DIR}/${domain}.conf"
+        else
+            echo "[nginx-ssl] ⚠ ${domain}: Certificados no encontrados -> Activando HTTP (desafío ACME habilitado)"
+            cp "$http_file" "${CONF_DIR}/${domain}.conf"
+        fi
+    done
 else
-    cp /etc/nginx/templates/default.http.conf /etc/nginx/conf.d/default.conf
+    echo "[nginx-ssl] Modo legacy monolítico detectado..."
+    if [ -f /etc/letsencrypt/live/wilkinbarban.duckdns.org/fullchain.pem ] && [ -f /etc/letsencrypt/live/wilkinbarban.duckdns.org/privkey.pem ]; then
+        cp /etc/nginx/templates/default.https.conf /etc/nginx/conf.d/default.conf
+    else
+        cp /etc/nginx/templates/default.http.conf /etc/nginx/conf.d/default.conf
+    fi
 fi
 
-rm -f /etc/nginx/conf.d/default.conf.default
+echo "[nginx-ssl] Configuración lista en $CONF_DIR."

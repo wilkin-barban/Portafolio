@@ -26,6 +26,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
+      - ./nginx/sites:/etc/nginx/sites-templates:ro
       - ./nginx/default.http.conf:/etc/nginx/templates/default.http.conf:ro
       - ./nginx/default.https.conf:/etc/nginx/templates/default.https.conf:ro
       - ./nginx/select-config.sh:/docker-entrypoint.d/40-select-ssl-config.sh:ro
