@@ -33,10 +33,6 @@ services:
       - certbot-www:/var/www/certbot:ro
       - letsencrypt:/etc/letsencrypt:ro
     restart: unless-stopped
-    networks:
-      - default
-      - asados-app-private
-      - asados-supabase-private
     healthcheck:
       test: ["CMD-SHELL", "nginx -t && wget -q --no-check-certificate -O /dev/null http://127.0.0.1/"]
       interval: 30s
@@ -54,9 +50,3 @@ services:
 volumes:
   certbot-www:
   letsencrypt:
-
-networks:
-  asados-app-private:
-    external: true
-  asados-supabase-private:
-    external: true
