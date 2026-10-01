@@ -3,8 +3,21 @@ set -e
 
 CONF_DIR="/etc/nginx/conf.d"
 SITES_DIR="/etc/nginx/sites-templates"
+OBS_DIR="${OBSERVATION_DIR:-/var/log/nginx/edge-observations}"
 
 echo "[nginx-ssl] Iniciando comprobación de configuración SSL..."
+
+echo "[nginx-ssl] Verificando volumen de observación en $OBS_DIR..."
+if ! mountpoint -q "$OBS_DIR"; then
+    echo "[nginx-ssl] ERROR: $OBS_DIR no es un punto de montaje dedicado. Fallo cerrado para proteger logs del sistema." >&2
+    exit 1
+fi
+
+if ! chown 101:101 "$OBS_DIR" || ! chmod 0750 "$OBS_DIR"; then
+    echo "[nginx-ssl] ERROR: No se pudieron establecer permisos UID/GID 101 en $OBS_DIR." >&2
+    exit 1
+fi
+echo "[nginx-ssl] ✓ Volumen de observación verificado y permisos UID/GID 101 asegurados."
 
 if [ -d "$SITES_DIR" ]; then
     echo "[nginx-ssl] Modo modular detectado en $SITES_DIR"
