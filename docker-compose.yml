@@ -25,6 +25,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    environment:
+      - TZ=UTC
     volumes:
       - ./nginx/sites:/etc/nginx/sites-templates:ro
       - ./nginx/default.http.conf:/etc/nginx/templates/default.http.conf:ro
@@ -32,6 +34,7 @@ services:
       - ./nginx/select-config.sh:/docker-entrypoint.d/40-select-ssl-config.sh:ro
       - certbot-www:/var/www/certbot:ro
       - letsencrypt:/etc/letsencrypt:ro
+      - edge-observations:/var/log/nginx/edge-observations
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "nginx -t && wget -q --no-check-certificate -O /dev/null http://127.0.0.1/"]
@@ -47,6 +50,23 @@ services:
       - certbot-www:/var/www/certbot
       - letsencrypt:/etc/letsencrypt
 
+  edge-observation-pruner:
+    image: nginx:1.27-alpine
+    container_name: portfolio-edge-observation-pruner
+    network_mode: "none"
+    user: "101:101"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+    volumes:
+      - edge-observations:/var/log/nginx/edge-observations
+      - ./scripts/prune-edge-observation.sh:/usr/local/bin/prune-edge-observation.sh:ro
+    entrypoint: ["/bin/sh", "/usr/local/bin/prune-edge-observation.sh"]
+
 volumes:
   certbot-www:
   letsencrypt:
+  edge-observations:
