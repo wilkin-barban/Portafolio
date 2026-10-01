@@ -67,6 +67,17 @@ describe('CRM Edge Observation Invariants', () => {
       assert.match(content, /proxy_buffering\s+off;/);
       assert.match(content, /proxy_read_timeout\s+3600s;/);
     });
+
+    test('requires root in same combined proxy location for variable log evaluation', () => {
+      const content = fs.readFileSync(NGINX_CONF_PATH, 'utf8');
+
+      const locationMatch = content.match(/location\s+~\s+\^\/\(auth\|rest\|storage\|realtime\|functions\)\/v1\(\?:\/\|\$\)\s*\{([\s\S]*?)\}/);
+      assert.ok(locationMatch, 'Combined Supabase location block must exist');
+
+      const locationBlock = locationMatch[1];
+      assert.match(locationBlock, /access_log\s+\/var\/log\/nginx\/edge-observations\/crm-edge-\$crm_edge_hour\.log/, 'Must contain variable edge observation log');
+      assert.match(locationBlock, /root\s+\/usr\/share\/nginx\/html;/, 'Must specify root /usr/share/nginx/html; in same combined proxy location');
+    });
   });
 
   describe('Entrypoint Mountpoint and Permissions Guard', () => {
