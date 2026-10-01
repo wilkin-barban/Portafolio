@@ -18,3 +18,12 @@ C:
 .atl/
 .agents/
 .codex/
+
+# Host runtime logs
+/certbot-renew.log
+
+# Inactive local Nginx template copies
+/nginx/sites-available/
+
+# ODD task artifacts
+/odd/
