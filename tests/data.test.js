@@ -23,7 +23,7 @@ test("Verificar integridad de diccionarios de idioma (es, en, pt)", () => {
     });
 
     assert.ok(Array.isArray(json.projects?.projects), `projects.projects debe ser un array en ${lang}.json`);
-    assert.equal(json.projects.projects.length, 6, `Debe haber 6 proyectos configurados en ${lang}.json`);
+    assert.equal(json.projects.projects.length, 5, `Debe haber 5 proyectos configurados en ${lang}.json`);
   });
 });
 
@@ -33,7 +33,7 @@ test("Verificar archivo de metadatos projects.json", () => {
 
   const projects = JSON.parse(fs.readFileSync(filePath, "utf8"));
   assert.ok(Array.isArray(projects), "projects.json debe ser un array");
-  assert.equal(projects.length, 6, "Deben existir 6 proyectos");
+  assert.equal(projects.length, 5, "Deben existir 5 proyectos");
 
   projects.forEach((proj) => {
     assert.ok(proj.id, "Cada proyecto debe tener un id");

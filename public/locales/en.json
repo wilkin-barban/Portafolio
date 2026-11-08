@@ -268,44 +268,6 @@
           "commandCopied": "Command copied",
           "command": "git clone https://github.com/wilkin-barban/pi-auto-compaction.git && cd pi-auto-compaction && npm ci --ignore-scripts && npm run deploy -- --dry-run"
         }
-      },
-      {
-        "name": "Portafolio",
-        "subtitle": "Trilingual site with real projects and screenshots",
-        "description": "Professional portfolio built with Express, HTML, CSS and JavaScript, with ES/EN/PT i18n, light/dark themes, JSON-driven projects, screenshot galleries and a chat widget.",
-        "does": "Presents projects and case studies, loads metadata and translations, serves galleries from disk and exposes health/statistics; runs in Docker behind Nginx.",
-        "problem": "The site showed old projects, links to the previous account and a screenshot library that no longer matched the current products.",
-        "caseStudy": {
-          "sections": [
-            {
-              "title": "Problem",
-              "text": "Outdated content, broken links and screenshots that did not match the published projects."
-            },
-            {
-              "title": "Implemented solution",
-              "text": "Migration to the new repo, JSON data aligned with the 6 current projects, trilingual i18n, real screenshots, OG/social preview and Docker/Nginx deployment."
-            },
-            {
-              "title": "Outcome",
-              "text": "Portfolio published with the real projects, verified links, current screenshots and release v1.1.2."
-            }
-          ],
-          "installTitle": "Recommended method",
-          "methods": [
-            "Docker Compose (recommended) to serve the site with Nginx as proxy.",
-            "Local development with Node.js and npm start."
-          ],
-          "stepsTitle": "Recommended steps",
-          "steps": [
-            "Clone the repo and install dependencies.",
-            "Run npm start or docker compose up -d --build.",
-            "Open port 3000 or the configured domain."
-          ],
-          "commandTitle": "One-click command",
-          "commandLabel": "Copy command",
-          "commandCopied": "Command copied",
-          "command": "git clone https://github.com/wilkin-barban/Portafolio.git && cd Portafolio && npm ci && npm start"
-        }
       }
     ],
     "live": "Live demo"

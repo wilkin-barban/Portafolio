@@ -10,7 +10,7 @@ export const loadLocale = async (lang) => {
   }
 
   try {
-    const response = await fetch(`/locales/${lang}.json`);
+    const response = await fetch(`/locales/${lang}.json?v=20261109-3`);
     if (!response.ok) throw new Error(`No se pudo cargar /locales/${lang}.json`);
     const data = await response.json();
     localeCache.set(lang, data);

@@ -268,44 +268,6 @@
           "commandCopied": "Comando copiado",
           "command": "git clone https://github.com/wilkin-barban/pi-auto-compaction.git && cd pi-auto-compaction && npm ci --ignore-scripts && npm run deploy -- --dry-run"
         }
-      },
-      {
-        "name": "Portafolio",
-        "subtitle": "Sitio trilingüe con proyectos y capturas reales",
-        "description": "Portafolio profesional en Express, HTML, CSS y JavaScript, con i18n ES/EN/PT, temas claro/oscuro, proyectos dinámicos desde JSON, galería de capturas y widget de chat.",
-        "does": "Presenta proyectos y casos de estudio, carga metadatos y traducciones, sirve galerías desde disco y expone salud/estadísticas; corre en Docker detrás de Nginx.",
-        "problem": "El sitio mostraba proyectos antiguos, enlaces al usuario anterior y una biblioteca de capturas que no representaba los productos actuales.",
-        "caseStudy": {
-          "sections": [
-            {
-              "title": "Problema",
-              "text": "Contenido desactualizado, enlaces rotos y capturas que no coincidían con los proyectos publicados."
-            },
-            {
-              "title": "Solución implementada",
-              "text": "Migración al repo nuevo, datos JSON alineados con los 6 proyectos actuales, i18n trilingüe, capturas reales, OG/social preview y despliegue Docker/Nginx."
-            },
-            {
-              "title": "Resultado",
-              "text": "Portafolio publicado con la realidad de los proyectos, enlaces verificados, capturas actuales y release v1.1.2."
-            }
-          ],
-          "installTitle": "Método recomendado",
-          "methods": [
-            "Docker Compose (recomendado) para servir el sitio y Nginx como proxy.",
-            "Desarrollo local con Node.js y npm start."
-          ],
-          "stepsTitle": "Pasos recomendados",
-          "steps": [
-            "Clonar el repo e instalar dependencias.",
-            "Ejecutar npm start o docker compose up -d --build.",
-            "Abrir el puerto 3000 o el dominio configurado."
-          ],
-          "commandTitle": "Comando de un clic",
-          "commandLabel": "Copiar comando",
-          "commandCopied": "Comando copiado",
-          "command": "git clone https://github.com/wilkin-barban/Portafolio.git && cd Portafolio && npm ci && npm start"
-        }
       }
     ],
     "live": "Ver en vivo"

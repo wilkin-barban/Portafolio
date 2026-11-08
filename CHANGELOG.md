@@ -4,6 +4,22 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.3] - 2026-11-08
+
+### Cambiado
+
+- El proyecto **Portafolio** ya no se muestra dentro de su propia sección de proyectos; quedan cinco proyectos de producto.
+- Eliminadas la entrada de Portafolio, sus textos ES/EN/PT y la carpeta de capturas `public/Portafolio/`.
+- Contador y `/api/stats` actualizados a 5 proyectos.
+- `assetVersion` `20261109-3` y `Cache-Control: no-cache` para HTML/JSON.
+- README y README del perfil sin la fila de Portafolio.
+
+### Verificación
+
+- `npm run check` y `npm test`: 24/24 tests OK.
+- CI y build Docker en verde.
+- Galerías de los cinco proyectos verificadas en live.
+
 ## [1.1.2] - 2026-11-08
 
 ### Cambiado
@@ -63,6 +79,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Galerías API validadas para los seis proyectos.
 - Build Docker y despliegue en `portfolio-web` verificados.
 
+[1.1.3]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.3
 [1.1.2]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.2
 [1.1.1]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.1
 [1.1.0]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.0

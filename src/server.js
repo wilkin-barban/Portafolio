@@ -23,7 +23,12 @@ app.use(
   express.static(publicDir, {
     extensions: ["html"],
     maxAge: process.env.NODE_ENV === "production" ? "1d" : 0,
-    etag: true
+    etag: true,
+    setHeaders: (res, filePath) => {
+      if (/\.(html|json)$/i.test(filePath)) {
+        res.setHeader("Cache-Control", "no-cache");
+      }
+    }
   })
 );
 

@@ -4,7 +4,7 @@
 import { createElement, writeToClipboard } from "./utils.js";
 import { fetchGallery, openGalleryViewer } from "./gallery.js";
 
-const assetVersion = "20261109-2";
+const assetVersion = "20261109-3";
 
 export const renderSkills = (locale) => {
   const skills = document.querySelector("[data-skills]");

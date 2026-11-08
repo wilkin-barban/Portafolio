@@ -16,7 +16,6 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 | **Super Chat Manager** | Chat en vivo auto-hospedado con widget, Telegram, panel, RAG y Docker. | [Repo](https://github.com/wilkin-barban/Super-Chat-Manager) · [Release](https://github.com/wilkin-barban/Super-Chat-Manager/releases/latest) |
 | **FF-Converter** | Conversor FFmpeg de escritorio para Windows y Linux, por lotes y con perfiles. | [Repo](https://github.com/wilkin-barban/FF-Converter) · [Release](https://github.com/wilkin-barban/FF-Converter/releases/latest) |
 | **pi-auto-compaction** | Compactación automática y configurable para agentes Pi, gentle-shell y herdr. | [Repo](https://github.com/wilkin-barban/pi-auto-compaction) · [Release](https://github.com/wilkin-barban/pi-auto-compaction/releases/latest) |
-| **Portafolio** | Este sitio: Express, i18n trilingüe, datos JSON, galería y Docker/Nginx. | [Repo](https://github.com/wilkin-barban/Portafolio) · [Demo](https://wilkinbarban.duckdns.org) · [Release](https://github.com/wilkin-barban/Portafolio/releases/latest) |
 
 ---
 
@@ -45,7 +44,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs/
-│   ├── releases/v1.1.2.md
+│   ├── releases/v1.1.3.md
 │   └── operations/
 └── nginx/
 ```
@@ -101,7 +100,7 @@ La suite cubre integridad de idiomas, metadatos, configuración, seguridad HTTP,
 
 ## Release
 
-La versión actual es **v1.1.2**. Las notas están en [`docs/releases/v1.1.2.md`](docs/releases/v1.1.2.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
+La versión actual es **v1.1.3**. Las notas están en [`docs/releases/v1.1.3.md`](docs/releases/v1.1.3.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contacto
 

@@ -35,13 +35,5 @@
     "folder": "pi_auto_compaction",
     "repo": "https://github.com/wilkin-barban/pi-auto-compaction",
     "release": "https://github.com/wilkin-barban/pi-auto-compaction/releases/latest"
-  },
-  {
-    "id": "portafolio",
-    "icon": "WB",
-    "folder": "Portafolio",
-    "repo": "https://github.com/wilkin-barban/Portafolio",
-    "release": "https://github.com/wilkin-barban/Portafolio/releases/latest",
-    "live": "https://wilkinbarban.duckdns.org"
   }
 ]
