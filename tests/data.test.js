@@ -56,6 +56,7 @@ test("Verificar archivo de configuracion config.json", () => {
   const config = JSON.parse(fs.readFileSync(filePath, "utf8"));
   assert.ok(Array.isArray(config.contactLinks), "contactLinks debe ser un array");
   assert.equal(config.contactLinks[0].href, "https://github.com/wilkin-barban/", "El enlace de GitHub debe usar la cuenta nueva");
+  assert.equal(config.contactLinks[1].href, "mailto:wilkin.barban@gmail.com", "El correo de contacto debe ser wilkin.barban@gmail.com");
   assert.ok(config.supportTargets?.wise, "supportTargets debe contener wise");
   assert.ok(config.supportTargets?.pix, "supportTargets debe contener pix");
   assert.equal(config.supportTargets.pix, "wilkin.barban@gmail.com");

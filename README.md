@@ -44,7 +44,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs/
-│   ├── releases/v1.1.3.md
+│   ├── releases/v1.1.4.md
 │   └── operations/
 └── nginx/
 ```
@@ -100,12 +100,12 @@ La suite cubre integridad de idiomas, metadatos, configuración, seguridad HTTP,
 
 ## Release
 
-La versión actual es **v1.1.3**. Las notas están en [`docs/releases/v1.1.3.md`](docs/releases/v1.1.3.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
+La versión actual es **v1.1.4**. Las notas están en [`docs/releases/v1.1.4.md`](docs/releases/v1.1.4.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contacto
 
 - **GitHub:** [@wilkin-barban](https://github.com/wilkin-barban)
-- **Correo:** [barbanwilkin@gmail.com](mailto:barbanwilkin@gmail.com)
+- **Correo:** [wilkin.barban@gmail.com](mailto:wilkin.barban@gmail.com)
 - **LinkedIn:** [wilkin-barban-rosabal](https://www.linkedin.com/in/wilkin-barban-rosabal)
 - **Portafolio:** [wilkinbarban.duckdns.org](https://wilkinbarban.duckdns.org)
 

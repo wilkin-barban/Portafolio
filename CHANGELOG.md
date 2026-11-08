@@ -4,6 +4,20 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.4] - 2026-11-08
+
+### Cambiado
+
+- Email de contacto del portafolio actualizado a **wilkin.barban@gmail.com**.
+- README, `public/data/config.json` y test de configuración actualizados.
+- `assetVersion` actualizado a `20261109-4`.
+
+### Verificación
+
+- `npm run check` y `npm test`: 24/24 tests OK.
+- CI y build Docker en verde.
+- Contacto y email live verificados.
+
 ## [1.1.3] - 2026-11-08
 
 ### Cambiado
@@ -79,6 +93,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Galerías API validadas para los seis proyectos.
 - Build Docker y despliegue en `portfolio-web` verificados.
 
+[1.1.4]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.4
 [1.1.3]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.3
 [1.1.2]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.2
 [1.1.1]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.1

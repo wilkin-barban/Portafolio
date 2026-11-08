@@ -129,8 +129,8 @@ const boot = async () => {
   // Carga de configuración y metadatos
   try {
     const [metaRes, configRes] = await Promise.all([
-      fetch("/data/projects.json?v=20261109-3"),
-      fetch("/data/config.json?v=20261109-3")
+      fetch("/data/projects.json?v=20261109-4"),
+      fetch("/data/config.json?v=20261109-4")
     ]);
     if (metaRes.ok) projectMeta = await metaRes.json();
     if (configRes.ok) appConfig = await configRes.json();
