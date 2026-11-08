@@ -4,6 +4,19 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.2] - 2026-11-08
+
+### Cambiado
+
+- FF-Converter: añadidas **Catálogo de Perfiles** y **Diagnóstico del sistema**; la galería queda con tres capturas de interfaz.
+- `assetVersion` actualizado a `20261109-2` para invalidar la caché de la galería.
+
+### Verificación
+
+- `npm run check` y `npm test`: 24/24 tests OK.
+- CI y build Docker en verde.
+- Galería live de FF-Converter con tres imágenes y hashes coincidentes.
+
 ## [1.1.1] - 2026-11-08
 
 ### Cambiado
@@ -50,5 +63,6 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Galerías API validadas para los seis proyectos.
 - Build Docker y despliegue en `portfolio-web` verificados.
 
+[1.1.2]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.2
 [1.1.1]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.1
 [1.1.0]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.0
