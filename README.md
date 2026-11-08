@@ -45,7 +45,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs/
-│   ├── releases/v1.1.0.md
+│   ├── releases/v1.1.1.md
 │   └── operations/
 └── nginx/
 ```
@@ -101,7 +101,7 @@ La suite cubre integridad de idiomas, metadatos, configuración, seguridad HTTP,
 
 ## Release
 
-La versión actual es **v1.1.0**. Las notas están en [`docs/releases/v1.1.0.md`](docs/releases/v1.1.0.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
+La versión actual es **v1.1.1**. Las notas están en [`docs/releases/v1.1.1.md`](docs/releases/v1.1.1.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contacto
 

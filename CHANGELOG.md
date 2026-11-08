@@ -4,6 +4,21 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.1] - 2026-11-08
+
+### Cambiado
+
+- CRM Sofia Manager: reemplazadas las dos capturas de login de operador/móvil por **Métricas & Desempeño** y **Estoque & Combos**.
+- Trindade Massas: reemplazadas las dos capturas de login por **Dashboard**, **Lançamento de Massas** y **Calculador de Estoque** (tres imágenes).
+- Super Chat Manager: añadidas **AI Management Panel** y **Theme Catalog / Appearance**; la demo del widget queda como tercera captura.
+- `assetVersion` actualizado a `20261109-1` para invalidar la caché de las galerías.
+
+### Verificación
+
+- `npm run check` y `npm test`: 24/24 tests OK.
+- CI y build Docker en verde.
+- Galerías live verificadas para los seis proyectos.
+
 ## [1.1.0] - 2026-11-08
 
 ### Agregado
@@ -35,4 +50,5 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Galerías API validadas para los seis proyectos.
 - Build Docker y despliegue en `portfolio-web` verificados.
 
+[1.1.1]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.1
 [1.1.0]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.0
