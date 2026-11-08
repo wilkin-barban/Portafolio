@@ -104,7 +104,7 @@ app.get("/api/stats", async (_req, res) => {
   }
 
   try {
-    const response = await fetch("https://api.github.com/users/wilkinbarban", {
+    const response = await fetch("https://api.github.com/users/wilkin-barban", {
       headers: { "User-Agent": "Portfolio-App" },
       signal: AbortSignal.timeout(5000)
     });
@@ -115,7 +115,8 @@ app.get("/api/stats", async (_req, res) => {
 
     const data = await response.json();
     statsCache = {
-      repos: data.public_repos || 4,
+      repos: data.public_repos || 7,
+      projects: getAuthorizedFolders().size,
       followers: data.followers || 0
     };
     statsLastFetch = now;

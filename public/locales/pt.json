@@ -1,8 +1,7 @@
 {
   "meta": {
-    "title": "Wilkin | Desenvolvedor de software",
-    "description": "Portfólio profissional de desenvolvedor de software especializado em automação, Node.js, Python, aplicações web e soluções freelance.",
-    "languageSelector": "Seletor de idioma"
+    "title": "Wilkin Barban | Desenvolvedor de software",
+    "description": "Portfólio profissional de Wilkin Barban: produtos full-stack, IA, automação, aplicações web e ferramentas desktop."
   },
   "nav": {
     "about": "Sobre mim",
@@ -13,14 +12,14 @@
     "language": "Idioma"
   },
   "hero": {
-    "eyebrow": "Software developer · Automação · Freelance",
-    "title": "Wilkin, desenvolvedor de software focado em soluções reais.",
-    "text": "Construo ferramentas produtivas, fluxos de automação e experiências web limpas para transformar processos complexos em sistemas simples, rápidos e confiáveis.",
+    "eyebrow": "Desenvolvimento full-stack · IA · Automação",
+    "title": "Wilkin, desenvolvedor de software focado em produtos reais.",
+    "text": "Construo produtos web, ferramentas desktop e sistemas auto-hospedados que transformam processos complexos em operações simples, mensuráveis e confiáveis.",
     "primary": "Vamos conversar",
     "secondary": "Ver projetos",
     "cardAria": "Resumo profissional",
     "cardLabel": "Disponível para",
-    "cardTitle": "Automação, aplicações web e ferramentas sob medida",
+    "cardTitle": "Produtos web, automação e IA aplicada",
     "stats": {
       "skills": "habilidades",
       "projects": "projetos",
@@ -31,42 +30,47 @@
     "eyebrow": "Sobre mim",
     "title": "Uma trajetória de adaptação, aprendizado e execução.",
     "paragraphs": [
-      "Sou um desenvolvedor de software de origem cubana, atualmente radicado em Curitiba, Brasil, na condição de refugiado. Minha trajetória é uma história de adaptação e evolução constante: da gestão logística profissional à criação de soluções digitais complexas.",
-      "Sou especializado em automação de processos e no desenvolvimento de aplicações que resolvem problemas reais. Minha abordagem combina a eficiência da lógica de programação com uma capacidade autodidata para dominar ferramentas como Python e Node.js.",
-      "Desenvolvi utilitários de software voltados à produtividade real, otimizando tarefas que vão da normalização de mídia à gestão inteligente de arquivos.",
-      "Acredito firmemente que a tecnologia é minha melhor linguagem para gerar valor em qualquer ambiente."
+      "Sou um desenvolvedor de software cubano radicado em Curitiba, Brasil, sob condição de refugiado. Minha trajetória combina gestão logística, aprendizado autodidata e prática constante de engenharia de software.",
+      "Hoje construo produtos full-stack e sistemas auto-hospedados: CRM omnichannel com IA, plataformas de operações web/Android, chat ao vivo, ferramentas desktop e utilitários para agentes de IA.",
+      "Foco em resolver problemas reais com TypeScript, Node.js, Python, React/Next.js, Kotlin, PostgreSQL/Supabase, Docker e Linux, cuidando da experiência, segurança e manutenibilidade.",
+      "Acredito que a tecnologia é minha melhor linguagem para gerar valor: documentação clara, testes automatizados e deploys reproduzíveis fazem parte do produto."
     ],
     "timeline": [
       "Detectar processos repetitivos e transformá-los em sistemas.",
-      "Projetar ferramentas simples, sustentáveis e úteis desde o primeiro dia.",
+      "Desenhar ferramentas simples, manteníveis e úteis desde o primeiro dia.",
       "Iterar com dados reais, documentação clara e mentalidade de produto."
     ]
   },
   "skills": {
     "eyebrow": "Habilidades",
-    "title": "Stack técnico orientado a produtividade, automação e produto.",
+    "title": "Stack técnico para produtos web, automação e IA.",
     "list": [
-      "Python",
-      "Node.js",
+      "TypeScript",
       "JavaScript",
-      "HTML5",
-      "CSS3",
+      "Python",
+      "Kotlin",
+      "Node.js",
+      "React",
+      "Next.js",
+      "Electron",
+      "PostgreSQL",
+      "Supabase",
+      "SQLite",
+      "Redis",
       "Docker",
       "Linux",
-      "GitHub",
+      "Nginx",
       "APIs",
       "FFmpeg",
-      "Tkinter",
-      "UI/UX",
-      "Automação",
-      "SEO básico",
+      "RAG / IA",
+      "Git / GitHub",
       "i18n / L10n"
     ]
   },
   "projects": {
     "eyebrow": "Projetos",
-    "title": "Ferramentas criadas para necessidades reais.",
-    "intro": "Ferramentas que construí para resolver problemas reais do meu dia a dia. Cada projeto nasceu de uma necessidade pessoal e foi desenvolvido com fins educativos e de evolução técnica. O código é aberto, as soluções são funcionais e estou sempre disposto a receber melhorias, correções e colaborações.",
+    "title": "Produtos reais, construídos de ponta a ponta.",
+    "intro": "Uma seleção dos produtos que construo e mantenho atualmente. Cada caso inclui o problema, a solução e o resultado; as capturas vêm das aplicações reais.",
     "open": "Ver detalhes",
     "repo": "Repositório",
     "release": "Última versão",
@@ -76,281 +80,272 @@
     "does": "O que faz",
     "projects": [
       {
-        "name": "YouTube Downloader",
-        "subtitle": "Downloader avançado de vídeo e áudio",
-        "description": "Aplicativo desktop para Windows desenvolvido com Python e PyQt6 para gerenciar downloads do YouTube (vídeo, playlists e áudio), com fila concorrente, histórico, logs, monitor da área de transferência e gestor web assíncrono em FastAPI/WebSockets.",
-        "does": "Baixa vídeos individuais, playlists e áudio, suporta até 3 downloads simultâneos, detecta links pela área de transferência, integra FFmpeg e oferece um gestor web local em http://127.0.0.1:8000 com progresso em tempo real.",
-        "problem": "Resolve a necessidade de baixar material educativo, referências ou recursos de forma organizada, repetível e com uma interface gráfica estável que gerencia filas automaticamente.",
+        "name": "CRM Sofia Manager",
+        "subtitle": "CRM omnichannel com IA para pedidos e atendimento",
+        "description": "Plataforma web para gerenciar pedidos, atendimento omnichannel e estoque de uma operação de assados, com a Sofia (IA) no WhatsApp, Telegram e web, console de operadores em tempo real e pagamentos Pix/Mercado Pago.",
+        "does": "Centraliza conversas, carrinho, pedidos, inventário, pagamentos e relatórios; a Sofia responde com RAG sobre o cardápio e encaminha para humanos quando necessário.",
+        "problem": "A operação de domingo dependia de mensagens dispersas e controle manual de estoque; era fácil vender além da capacidade, perder pedidos ou conciliar pagamentos tarde.",
         "caseStudy": {
           "sections": [
             {
               "title": "Problema",
-              "text": "Muitos downloaders são instáveis, limitados em formatos ou não possuem gerenciamento de filas. Baixar playlists longas ou formatos específicos de forma repetitiva consome tempo e está sujeito a erros."
+              "text": "Pedidos por WhatsApp, Telegram e web sem uma fonte única; estoque finito, horários e pagamentos que exigiam conciliação manual."
             },
             {
               "title": "Solução implementada",
-              "text": "Foi desenvolvido um aplicativo em Python com PyQt6 e yt-dlp. Integra FFmpeg, workers em segundo plano, monitor da área de transferência e um gestor web moderno baseado em FastAPI e WebSockets para controle remoto local."
+              "text": "Next.js 16, TypeScript e Supabase/PostgreSQL 17 com RLS e RPCs atômicas; RAG com DeepSeek, Evolution API e Telegram, console Realtime e webhooks idempotentes do Mercado Pago/Pix; tudo em Docker."
             },
             {
               "title": "Resultado",
-              "text": "Uma experiência robusta e automatizada que reduz o tempo operacional, permite baixar playlists completas e extrair áudio facilmente, com um instalador automático para Windows."
+              "text": "Uma fonte única para a operação, estoque transacional, atendimento em tempo real e pagamentos conciliados; v0.1.0 com 2.827 casos de teste e CI verde."
             }
           ],
           "installTitle": "Método recomendado",
           "methods": [
-            "🚀 Método recomendado (.exe): Baixe YouTubeDownloader.exe da última release. Inclui o runtime necessário e FFmpeg portátil empacotado, ideal para usuários não técnicos.",
-            "⚡ Instalação scriptável (PowerShell): Execute install.ps1 com o comando de um clique para baixar o repositório oficial, validá-lo, preparar .venv, instalar requirements.txt e iniciar o app."
-          ],
-          "stepsTitle": "Instalação alternativa",
-          "steps": [
-            "Clonar o repositório ou baixar o ZIP oficial.",
-            "Abrir a pasta do projeto no Windows.",
-            "Executar Iniciar.bat para validar Python, criar .venv, instalar dependências e abrir a interface."
-          ],
-          "commandTitle": "Comando de um clique",
-          "commandLabel": "Copiar comando",
-          "commandCopied": "Comando copiado",
-          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/youtube-downloader/main/install.ps1 | iex"
-        }
-      },
-      {
-        "name": "Normalizador de Áudio",
-        "subtitle": "Normalizador inteligente de áudio",
-        "description": "Aplicativo desktop para Windows que normaliza o volume de lotes de vídeo com FFmpeg loudnorm (LUFS), perfis de referência, relatórios antes/depois, processamento paralelo configurável e configuração local fora do repositório.",
-        "does": "Analisa vídeos, aplica presets LUFS para YouTube, Netflix, Spotify, Podcast ou modo Custom, gera perfis de referência, mostra waveform, exporta relatórios CSV/TXT e pode usar aceleração GPU com fallback para CPU.",
-        "problem": "Evita revisar e editar manualmente grandes coleções de áudio quando cada arquivo tem um nível de volume diferente, o que gera ajustes lentos e sujeitos a erros.",
-        "caseStudy": {
-          "sections": [
-            {
-              "title": "Problema",
-              "text": "Em coleções de vídeo, a inconsistência de volume e a necessidade de parâmetros LUFS padronizados geram fluxos de trabalho repetitivos e uma experiência final ruim."
-            },
-            {
-              "title": "Solução implementada",
-              "text": "Foi desenvolvido um aplicativo com Python, PyQt6 e FFmpeg que automatiza a normalização loudnorm (LUFS). Inclui presets, fluxo de perfil de referência, processamento paralelo configurável, detecção de GPU, visualização de waveform e relatórios rastreáveis."
-            },
-            {
-              "title": "Resultado",
-              "text": "Um fluxo de normalização eficiente com relatórios I, LRA e TP, acelerando drasticamente o processamento de lotes de vídeo com uma interface multilíngue (ES/EN/PT)."
-            }
-          ],
-          "installTitle": "Método recomendado",
-          "methods": [
-            "🚀 Instalação oficial com PowerShell: Execute o comando de um clique baseado em install.ps1. Este é o único fluxo oficial de instalação remota.",
-            "⚡ O instalador baixa o repositório quando necessário, valida o arquivo, cria ou reutiliza .venv, instala requirements.txt, verifica Python/FFmpeg e inicia o aplicativo."
-          ],
-          "stepsTitle": "Instalação alternativa",
-          "steps": [
-            "Opcionalmente definir $env:NORM_INSTALL_DIR para alterar a pasta de instalação.",
-            "Executar o comando PowerShell de um clique.",
-            "Adicionar vídeos, selecionar preset ou perfil de referência, escolher pasta de saída e revisar os relatórios gerados."
-          ],
-          "commandTitle": "Comando de um clique",
-          "commandLabel": "Copiar comando",
-          "commandCopied": "Comando copiado",
-          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/normalizador-audio/main/install.ps1 | iex"
-        }
-      },
-      {
-        "name": "Photo Dedup",
-        "subtitle": "Detector e removedor de fotos duplicadas",
-        "description": "PhotoDedup ajuda a limpar bibliotecas grandes de fotos sem exclusão cega. Ele analisa arquivos, agrupa duplicatas prováveis e permite decidir visualmente qual foto manter, com edições Lite e Full.",
-        "does": "Detecta duplicatas exatas por tamanho/hash, similaridade visual com hashes perceptuais, comparação assistida por IA em PhotoDedup-full.exe, integração com Google Takeout, revisão por grupos e ações seguras para a Lixeira ou pasta de destino.",
-        "problem": "Resolve a desorganização de bibliotecas fotográficas grandes onde duplicatas mudam de nome, tamanho ou compressão, consumindo espaço e dificultando o gerenciamento.",
-        "caseStudy": {
-          "sections": [
-            {
-              "title": "Problema",
-              "text": "As pastas de fotografias crescem com cópias e versões quase idênticas. A filtragem manual consome muito tempo e não oferece controle seguro nem auditabilidade."
-            },
-            {
-              "title": "Solução implementada",
-              "text": "Foi desenvolvida uma ferramenta em PyQt6 com análise por tamanho/hash, hashes perceptuais, cache local, suporte ao Google Takeout e assistência IA opcional na edição Full. A edição Lite mantém um fluxo mais leve sem dependências pesadas de IA."
-            },
-            {
-              "title": "Resultado",
-              "text": "Uma limpeza de bibliotecas significativamente mais rápida, com estatísticas de espaço recuperável e controle total sobre quais imagens manter."
-            }
-          ],
-          "installTitle": "Método recomendado",
-          "methods": [
-            "🚀 Download recomendado: Use a última release oficial e escolha PhotoDedup-lite.exe para limpeza rápida hash/visual ou PhotoDedup-full.exe para análise mais profunda com IA opcional.",
-            "⚡ Instalação com um comando: Execute install.ps1 no PowerShell. Fora do projeto ele baixa e valida o repositório; dentro do projeto valida Python 3.14.x, prepara .venv, instala dependências e abre o PhotoDedup."
+            "Docker Compose (recomendado): clone o repositório, configure as variáveis e suba os serviços.",
+            "Desenvolvimento local: Node.js 22, npm e uma instância do Supabase."
           ],
           "stepsTitle": "Passos recomendados",
           "steps": [
-            "Baixar a última release em Releases ou usar o comando PowerShell de um clique.",
-            "Escolher PhotoDedup-lite.exe para o fluxo hash/visual ou PhotoDedup-full.exe para análise assistida por IA.",
-            "Para uma cópia já baixada ou clonada, execute Iniciar.bat. Se o SmartScreen avisar, use 'Mais informações' e 'Executar assim mesmo' apenas se confiar na release oficial."
+            "Clonar o repositório e copiar .env.example para .env.",
+            "Configurar Supabase, DeepSeek, Evolution e Mercado Pago.",
+            "Executar docker compose up -d --build e abrir a porta 3000."
           ],
           "commandTitle": "Comando de um clique",
           "commandLabel": "Copiar comando",
           "commandCopied": "Comando copiado",
-          "command": "powershell -ExecutionPolicy Bypass -Command \"iwr -UseBasicParsing https://raw.githubusercontent.com/wilkinbarban/photo-dedup/main/install.ps1 | iex\""
+          "command": "git clone https://github.com/wilkin-barban/CRM_Sofia_Manager.git && cd CRM_Sofia_Manager && docker compose up -d --build"
         }
       },
       {
-        "name": "LiveChat Pro",
-        "subtitle": "Chat ao vivo auto-hospedado com painel web e Telegram",
-        "description": "LiveChat Pro é um chat ao vivo auto-hospedado com widget incorporável, integração com Telegram, painel web de administração, persistência SQLite, métricas do visitante, tradução automática e implantação recomendada via Docker.",
-        "does": "Insere chat em qualquer site com um único script, mantém sessão e histórico por visitante, envia mensagens para Telegram e /admin, permite respostas pelos dois canais e traduz mensagens entre idiomas.",
-        "problem": "Resolve a necessidade de suporte direto em sites pequenos sem depender de plataformas externas caras, mantendo controle total da infraestrutura e dos dados.",
+        "name": "Trindade Massas",
+        "subtitle": "Operações da fábrica na web e no Android",
+        "description": "Plataforma para produção de massas, relatórios de higiene e temperatura, cronograma de cargas, estoque e administração; web responsiva, Android nativo e integração com o ERP Aero32.",
+        "does": "Registra produção por produto e caixa, relatórios com fotos, vagas de carga, estoque e calculadoras; mantém as mesmas regras na web e no Android.",
+        "problem": "A fábrica usava planilhas e mensagens; faltavam rastreabilidade, controle de vagas e paridade entre web e Android.",
         "caseStudy": {
           "sections": [
             {
               "title": "Problema",
-              "text": "Sites pequenos precisam de atendimento rápido e direto, mas muitas plataformas de suporte são caras, pesadas e reduzem o controle operacional sobre dados e implantação."
+              "text": "Produção e controles dispersos, risco de erros e pouca visibilidade do estado da fábrica."
             },
             {
               "title": "Solução implementada",
-              "text": "Foi criada uma arquitetura auto-hospedada com widget incorporável, integração por bot do Telegram, painel web /admin, sessões persistentes por visitante, métricas operacionais (IP, geolocalização, idioma, user-agent) e tradução automática entre idiomas."
+              "text": "Monorepo com API Fastify/SQLite, SPA React/Vite, Android Kotlin/Compose, contratos OpenAPI, Docker/Nginx e integração Aero32; CI e release Android assinada."
             },
             {
               "title": "Resultado",
-              "text": "O resultado é um canal de suporte leve e fácil de implantar que centraliza conversas no Telegram e no painel admin, melhora o fluxo de resposta e evita dependência de fornecedores externos."
-            }
-          ],
-          "installTitle": "Método de instalação",
-          "methods": [
-            "🚀 Recomendado (VPS + Docker): Garanta que o comando node exista, execute node setup.js e escolha Public VPS with Docker para publicar em HOST_PORT=8080.",
-            "⚡ setup.js valida Node.js >= 24 e npm; se a versão inicial for antiga, tenta atualizar para Node.js 24 em distribuições suportadas.",
-            "🛠️ Local ou sem Docker: instale dependências com npm, execute setup.js e inicie server.js; opcionalmente use PM2 para manter o serviço online."
-          ],
-          "stepsTitle": "Passos recomendados",
-          "steps": [
-            "Instalar um pacote inicial de Node.js se o servidor não fornecer o comando node.",
-            "Criar o bot no BotFather e obter TELEGRAM_TOKEN e TELEGRAM_ADMIN_ID.",
-            "Executar o comando de instalação, escolher Public VPS with Docker ou modo local, definir domínio/origens permitidas e colar o script widget.js gerado no site externo."
-          ],
-          "commandTitle": "Comando de um clique",
-          "commandLabel": "Copiar comando",
-          "commandCopied": "Comando copiado",
-          "command": "git clone https://github.com/wilkinbarban/LiveChat-Pro.git && cd LiveChat-Pro && node setup.js"
-        }
-      },
-      {
-        "name": "WSL Manager Pro",
-        "subtitle": "Gerenciador profissional de WSL (Subsistema Windows para Linux)",
-        "description": "Aplicativo desktop para Windows que centraliza o gerenciamento do WSL: listar distribuições, instalar do catálogo online ou rootfs, importar/exportar, provisionamento pós-instalação, limites via .wslconfig e utilitários de manutenção. Construído com Python 3.14+, PySide6/Qt 6 e QThread.",
-        "does": "Lista distribuições, instala do catálogo online ou rootfs, importa/exporta distros, configura provisionamento pós-instalação (conta de usuário, pacotes, wsl.conf), aplica limites de recursos via .wslconfig e executa utilitários de manutenção.",
-        "problem": "Resolve a complexidade de gerenciar o WSL pela linha de comando, centralizando em uma interface gráfica todas as operações de instalação, configuração e manutenção das distribuições Linux.",
-        "caseStudy": {
-          "sections": [
-            {
-              "title": "Problema",
-              "text": "Gerenciar o WSL pela linha de comando exige conhecer vários comandos, scripts e configurações dispersas. Instalar distribuições, configurar recursos ou fazer manutenção envolve processos manuais repetitivos e sujeitos a erros."
-            },
-            {
-              "title": "Solução implementada",
-              "text": "Foi desenvolvido um aplicativo desktop com Python, PySide6 e Qt 6 que centraliza todo o gerenciamento do WSL em uma interface gráfica intuitiva. Inclui um catálogo de 9 distribuições, downloads retomáveis, assistente de instalação de 5 etapas, provisionamento pós-instalação automatizado, configuração visual do .wslconfig e utilitários de importação/exportação com workers em segundo plano."
-            },
-            {
-              "title": "Resultado",
-              "text": "Uma ferramenta completa que reduz drasticamente o tempo de configuração do WSL, permite instalar distribuições com um clique, automatiza o provisionamento inicial e oferece controle total sobre os recursos do sistema — tudo a partir de uma interface moderna e multilíngue (PT/ES/EN)."
+              "text": "Operação web e móvel com regras compartilhadas, registros auditáveis, estoque e vagas confiáveis e deploy reproduzível; v0.7.5."
             }
           ],
           "installTitle": "Método recomendado",
           "methods": [
-            "🚀 Instalação e execução com um único comando (PowerShell): Execute install.ps1 da branch master para baixar o ZIP oficial, extrair na Área de Trabalho e preparar o ambiente sem exigir Git.",
-            "⚡ Execução local rápida: Se você já tem o repositório ou ZIP, execute Iniciar.bat para detectar Python 3.14+, criar .venv, instalar requisitos e abrir a GUI."
+            "Web: entre na instância publicada com seu usuário da fábrica.",
+            "Desenvolvimento: Node.js 24, npm, Docker e make."
           ],
           "stepsTitle": "Passos recomendados",
           "steps": [
-            "Executar o comando PowerShell de um clique no Windows 10/11.",
-            "Permitir as verificações de WSL e Python 3.14+; o instalador pode usar winget e solicitar elevação se precisar habilitar o WSL.",
-            "Para instalação manual, baixar/clonar o repo, criar .venv, instalar requirements.txt e executar python main.py."
+            "Clonar o repositório e executar make install.",
+            "Copiar .env.example para .env e definir JWT_SECRET.",
+            "Executar make dev e abrir http://localhost:5173."
           ],
           "commandTitle": "Comando de um clique",
           "commandLabel": "Copiar comando",
           "commandCopied": "Comando copiado",
-          "command": "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force; irm https://raw.githubusercontent.com/wilkinbarban/WSL-Manager-Pro/master/install.ps1 | iex"
+          "command": "git clone https://github.com/wilkin-barban/Trindade.git && cd Trindade && make install && make dev"
         }
       },
       {
-        "name": "AI Workspace Manager",
-        "subtitle": "Centro local para auditoria, memória e tarefas com IA",
-        "description": "Aplicação local para auditar, documentar e melhorar projetos de software com ajuda de IA. Escaneia pastas do computador, detecta tecnologias, calcula métricas de saúde, preserva memória cronológica, registra tarefas concluídas e executa agentes com diffs visíveis.",
-        "does": "Analisa workspaces locais, identifica linguagem, framework, dependências, README, licença, Git, Docker e testes; calcula health score, mantém a memória do projeto, gerencia tarefas com IA e estima consumo de tokens/custos por provedor, modelo e tipo de tarefa.",
-        "problem": "Resolve a falta de contexto centralizado ao trabalhar com vários projetos, reduzindo auditorias manuais, perda de memória técnica e mudanças geradas por IA difíceis de revisar.",
+        "name": "Super Chat Manager",
+        "subtitle": "Chat ao vivo auto-hospedado com IA e Telegram",
+        "description": "Gerenciador de chat auto-hospedado com widget incorporável, painel administrativo, integração com Telegram, base de conhecimento RAG, SQLite e Docker; sucessor do LiveChat Pro.",
+        "does": "Adiciona chat a qualquer site com um script, mantém sessões e histórico, envia mensagens para o Telegram e o painel, permite responder nos dois e usa RAG aprovado pelo administrador.",
+        "problem": "Soluções SaaS de chat adicionam custo e dependência; faltavam controle dos dados, Telegram e uma base de conhecimento própria.",
         "caseStudy": {
           "sections": [
             {
               "title": "Problema",
-              "text": "Projetos acumulam dívida técnica, tarefas dispersas e decisões que se perdem entre pastas, chats e commits. Auditar manualmente cada workspace e preparar contexto para uma IA consome tempo e reduz a rastreabilidade."
+              "text": "Chat externo sem controle de dados, sem integração direta com Telegram e sem base de conhecimento própria."
             },
             {
               "title": "Solução implementada",
-              "text": "Foi desenvolvida uma aplicação com Electron, React, TypeScript, Node.js, Prisma e SQLite. Ela suporta modo desktop no Windows/macOS e modo web headless no Linux/WSL, com scanner local, memória cronológica, provedores IA configuráveis, agente com ferramentas internas e visualizador de diffs."
+              "text": "Node.js 24, Socket.IO, SQLite, Redis e Docker; widget e configuração pública; painel responsivo; RAG com índice aprovado; bot do Telegram; CI e imagens GHCR."
             },
             {
               "title": "Resultado",
-              "text": "Um painel local para medir saúde técnica, documentar decisões, executar tarefas assistidas por IA e auditar mudanças antes de aceitá-las, mantendo os dados do projeto em SQLite local e os segredos em armazenamento seguro ou .env conforme a plataforma."
+              "text": "Chat self-hosted com histórico persistente, operação pelo Telegram ou painel, RAG controlado e deploy reproduzível; v1.2.0."
             }
           ],
           "installTitle": "Método recomendado",
           "methods": [
-            "🚀 Windows: Execute o instalador PowerShell para baixar main.zip, validar Node.js >= 20 e npm >= 10, instalar dependências, preparar Prisma/SQLite e abrir o app Electron.",
-            "⚡ Linux/WSL/macOS: Execute install.sh com curl. No Linux/WSL ele inicia o backend Node.js em localhost:3000 e o frontend Vite em localhost:5173; no macOS usa Electron em modo de desenvolvimento."
+            "Instalador de um clique no Linux (Docker) ou Windows (Node.js).",
+            "Docker Compose manual para VPS com domínio e proxy reverso."
           ],
           "stepsTitle": "Passos recomendados",
           "steps": [
-            "Executar o instalador correspondente ao seu sistema operacional.",
-            "Configurar pelo menos um provedor IA pela interface ou por variáveis .env no modo headless.",
-            "Adicionar um workspace usando um caminho absoluto e revisar o health score, memória, tarefas e diffs gerados."
+            "Executar o instalador e seguir o assistente.",
+            "Configurar Telegram, credenciais e origem permitida.",
+            "Subir o serviço e colar o widget no site."
           ],
-          "commandTitle": "Comandos de um clique",
+          "commandTitle": "Comando de um clique",
           "commandLabel": "Copiar comando",
           "commandCopied": "Comando copiado",
-          "commands": [
+          "command": "curl -fsSL https://raw.githubusercontent.com/wilkin-barban/Super-Chat-Manager/main/install.sh | bash"
+        }
+      },
+      {
+        "name": "FF-Converter",
+        "subtitle": "Conversor FFmpeg de desktop, em lote",
+        "description": "Aplicativo Electron para Windows e Linux que converte vídeo e áudio em lote com FFmpeg incluído, perfis reutilizáveis, fila, pastas monitoradas, diagnóstico de GPU e logs.",
+        "does": "Permite arrastar arquivos ou pastas, escolher perfil e destino, processar na fila, retomar trabalhos, trocar idioma/tema e verificar atualizações.",
+        "problem": "Converter lotes com FFmpeg exigia comandos, caminhos e versões; não havia uma interface estável para perfis, fila e diagnóstico.",
+        "caseStudy": {
+          "sections": [
             {
-              "label": "Windows",
-              "command": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"irm https://raw.githubusercontent.com/wilkinbarban/AI-Workspace-Manager/main/install.ps1 | iex\""
+              "title": "Problema",
+              "text": "Processos manuais de conversão, risco de comandos incorretos e pouca visibilidade do progresso."
             },
             {
-              "label": "Linux, WSL e macOS",
-              "command": "curl -fsSL https://raw.githubusercontent.com/wilkinbarban/AI-Workspace-Manager/main/install.sh | bash"
+              "title": "Solução implementada",
+              "text": "Electron e TypeScript, FFmpeg empacotado com manifesto e hashes, fila persistente, perfis, diagnóstico de GPU, i18n, electron-builder e releases assinadas."
+            },
+            {
+              "title": "Resultado",
+              "text": "App multiplataforma para conversão local em lote, com logs, recuperação e atualizações; v1.1.1."
             }
-          ]
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Windows: instalador .exe da release mais recente.",
+            "Linux: AppImage ou pacote .deb; FFmpeg e FFprobe já incluídos."
+          ],
+          "stepsTitle": "Passos recomendados",
+          "steps": [
+            "Baixar o pacote da release para o seu sistema.",
+            "Abrir o app e arrastar arquivos ou uma pasta.",
+            "Escolher perfil e destino, e adicionar à fila."
+          ],
+          "commandTitle": "Comando de um clique",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/FF-Converter.git && cd FF-Converter && npm ci && npm run dev"
+        }
+      },
+      {
+        "name": "pi-auto-compaction",
+        "subtitle": "Compactação automática para agentes Pi",
+        "description": "Extensão para Pi, gentle-shell e herdr que desacopla a compactação do modelo da conversa, com summarizers configuráveis, fallback em camadas, telemetria local e doctor.",
+        "does": "Resume o histórico com modelos dedicados, permite escolher primário e fallback, aplica políticas por modelo, protege a cota e oferece diagnóstico somente leitura.",
+        "problem": "A compactação nativa consome o modelo caro e pode disparar cedo demais; sem fallback, uma sessão longa quebra.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problema",
+              "text": "Compactação acoplada ao modelo principal, limites opacos e um único ponto de falha."
+            },
+            {
+              "title": "Solução implementada",
+              "text": "Extensão TypeScript sem monkey-patching, configurações isoladas, fallback 60s/120s, políticas para 8 modelos, telemetria allowlisted, deploy imutável e CI Node 22/24."
+            },
+            {
+              "title": "Resultado",
+              "text": "Sessões longas mais econômicas e estáveis, com controle explícito e diagnóstico; 326 testes em 33 suítes e v1.2.1."
+            }
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Instalação manual pelo repositório com Node.js 22.19+.",
+            "Download do source archive da release mais recente."
+          ],
+          "stepsTitle": "Passos recomendados",
+          "steps": [
+            "Clonar o repositório e instalar dependências.",
+            "Executar npm run deploy -- --dry-run e revisar o relatório.",
+            "Executar npm run deploy e recarregar a sessão do Pi."
+          ],
+          "commandTitle": "Comando de um clique",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/pi-auto-compaction.git && cd pi-auto-compaction && npm ci --ignore-scripts && npm run deploy -- --dry-run"
+        }
+      },
+      {
+        "name": "Portafolio",
+        "subtitle": "Site trilíngue com projetos e capturas reais",
+        "description": "Portfólio profissional em Express, HTML, CSS e JavaScript, com i18n ES/EN/PT, temas claro/escuro, projetos dinâmicos em JSON, galeria de capturas e widget de chat.",
+        "does": "Apresenta projetos e estudos de caso, carrega metadados e traduções, serve galerias do disco e expõe saúde/estatísticas; roda em Docker atrás do Nginx.",
+        "problem": "O site mostrava projetos antigos, links para a conta anterior e uma biblioteca de capturas que não correspondia aos produtos atuais.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problema",
+              "text": "Conteúdo desatualizado, links quebrados e capturas que não correspondiam aos projetos publicados."
+            },
+            {
+              "title": "Solução implementada",
+              "text": "Migração para o novo repositório, dados JSON alinhados aos 6 projetos atuais, i18n trilíngue, capturas reais, OG/social preview e deploy Docker/Nginx."
+            },
+            {
+              "title": "Resultado",
+              "text": "Portfólio publicado com os projetos reais, links verificados, capturas atuais e release v1.1.0."
+            }
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Docker Compose (recomendado) para servir o site com Nginx como proxy.",
+            "Desenvolvimento local com Node.js e npm start."
+          ],
+          "stepsTitle": "Passos recomendados",
+          "steps": [
+            "Clonar o repositório e instalar dependências.",
+            "Executar npm start ou docker compose up -d --build.",
+            "Abrir a porta 3000 ou o domínio configurado."
+          ],
+          "commandTitle": "Comando de um clique",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/Portafolio.git && cd Portafolio && npm ci && npm start"
         }
       }
-    ]
+    ],
+    "live": "Ver ao vivo"
   },
   "services": {
     "eyebrow": "Serviços freelance",
-    "title": "Soluções pontuais ou colaborações de longo prazo.",
+    "title": "Produtos, automação e suporte técnico de ponta a ponta.",
     "intro": "Disponível para projetos pontuais ou colaborações de longo prazo. Orçamento sem compromisso.",
     "list": [
       {
-        "icon": "PY",
-        "title": "Automação & Scripts",
-        "intro": "Ferramentas sob medida que eliminam tarefas manuais, reduzem erros e escalam operações sem ampliar a equipe.",
+        "icon": "WEB",
+        "title": "Produtos web & APIs",
+        "intro": "Projeto e construo aplicações web full-stack com foco em operações reais, dados e experiência do usuário.",
         "items": [
-          "Scripts Python de alto desempenho para processamento em massa, limpeza de dados e pipelines automatizados.",
-          "Bots e integrações com APIs para conectar serviços, notificações e fluxos multiplataforma.",
-          "Aplicações desktop CLI e GUI pensadas para uso diário.",
-          "Processamento multimídia com FFmpeg para conversão, normalização, corte e exportação em lote."
+          "Next.js/React + Node.js/TypeScript, autenticação e painéis administrativos.",
+          "PostgreSQL/Supabase, RLS, RPCs e modelagem transacional.",
+          "Integrações de pagamento, webhooks idempotentes e notificações.",
+          "Docker, Nginx e deploys reproduzíveis."
         ]
       },
       {
-        "icon": "L10",
-        "title": "Serviços Especializados",
-        "intro": "Soluções linguísticas e técnicas para produtos digitais multilíngues, da localização de UI à internacionalização do código.",
+        "icon": "AI",
+        "title": "Automação & IA aplicada",
+        "intro": "Ferramentas que reduzem trabalho manual e conectam modelos de IA a processos concretos.",
         "items": [
-          "Localização de software com UI, menus e mensagens adaptados a cada idioma.",
-          "Tradução técnica ES ↔ PT-BR para documentação, manuais e conteúdo digital.",
-          "Internacionalização de apps com JSON, i18next e estruturas escaláveis.",
-          "Transcriação e adaptação cultural para evitar traduções literais fora de contexto."
+          "RAG sobre conhecimento próprio, prompts versionados e avaliação.",
+          "Bots de WhatsApp/Telegram e assistentes com handoff humano.",
+          "Scripts Python/Node para pipelines, dados e tarefas repetitivas.",
+          "Processamento de mídia com FFmpeg e ferramentas desktop."
         ]
       },
       {
-        "icon": "KDP",
-        "title": "Formatação & Publicação na Amazon",
-        "intro": "Preparação editorial completa para publicar na Amazon KDP com apresentação profissional, alta compatibilidade e posicionamento otimizado.",
+        "icon": "APP",
+        "title": "Apps desktop & Android",
+        "intro": "Aplicações locais e móveis com distribuição profissional e manutenção de longo prazo.",
         "items": [
-          "Diagramação KDP para eBook e livro impresso com estrutura profissional.",
-          "Conversão validada para EPUB e MOBI em múltiplos dispositivos.",
-          "Otimização de capas conforme especificações da Amazon.",
-          "Metadados e SEO para melhorar a visibilidade orgânica no catálogo."
+          "Electron + TypeScript para Windows/Linux.",
+          "Android nativo com Kotlin/Compose e releases assinadas.",
+          "Empacotamento, atualizações, assinaturas e CI.",
+          "QA, documentação e suporte de produção."
         ]
       }
     ]

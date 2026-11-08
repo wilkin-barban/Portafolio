@@ -23,8 +23,8 @@ Cuando el usuario te indique "lee Agents.md y creame la estructura del proyecto 
        "id": "mi-nuevo-proyecto",
        "icon": "NP",
        "folder": "Mi_Nuevo_Proyecto",
-       "repo": "https://github.com/wilkinbarban/mi-nuevo-proyecto",
-       "release": "https://github.com/wilkinbarban/mi-nuevo-proyecto/releases/latest"
+       "repo": "https://github.com/wilkin-barban/mi-nuevo-proyecto",
+       "release": "https://github.com/wilkin-barban/mi-nuevo-proyecto/releases/latest"
      }
      ```
 

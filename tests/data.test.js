@@ -40,6 +40,9 @@ test("Verificar archivo de metadatos projects.json", () => {
     assert.ok(proj.icon, "Cada proyecto debe tener un icon");
     assert.ok(proj.folder, "Cada proyecto debe tener un folder");
     assert.ok(proj.repo, "Cada proyecto debe tener un repo");
+    assert.match(proj.repo, /^https:\/\/github\.com\/wilkin-barban\//, "El repo debe pertenecer a wilkin-barban");
+    assert.ok(proj.release, "Cada proyecto debe tener un release");
+    assert.match(proj.release, /^https:\/\/github\.com\/wilkin-barban\//, "El release debe pertenecer a wilkin-barban");
 
     const folderPath = path.join(publicDir, proj.folder);
     assert.ok(fs.existsSync(folderPath), `La carpeta de capturas public/${proj.folder} debe existir`);
@@ -52,6 +55,7 @@ test("Verificar archivo de configuracion config.json", () => {
 
   const config = JSON.parse(fs.readFileSync(filePath, "utf8"));
   assert.ok(Array.isArray(config.contactLinks), "contactLinks debe ser un array");
+  assert.equal(config.contactLinks[0].href, "https://github.com/wilkin-barban/", "El enlace de GitHub debe usar la cuenta nueva");
   assert.ok(config.supportTargets?.wise, "supportTargets debe contener wise");
   assert.ok(config.supportTargets?.pix, "supportTargets debe contener pix");
   assert.equal(config.supportTargets.pix, "wilkin.barban@gmail.com");

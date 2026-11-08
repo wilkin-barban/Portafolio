@@ -39,11 +39,12 @@ test("Cabeceras de seguridad HTTP presentes", async () => {
 });
 
 test("GET /api/gallery/:project responde 200 para proyectos autorizados", async () => {
-  const res = await fetch(`${baseUrl}/api/gallery/Youtube_Downloader`);
+  const res = await fetch(`${baseUrl}/api/gallery/CRM_Sofia_Manager`);
   assert.equal(res.status, 200);
 
   const data = await res.json();
   assert.ok(Array.isArray(data.images));
+  assert.ok(data.images.length >= 1);
 });
 
 test("GET /api/gallery/:project rechaza con 404 carpetas no autorizadas", async () => {

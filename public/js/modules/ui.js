@@ -55,8 +55,8 @@ export const setupCounters = async () => {
     const response = await fetch("/api/stats");
     if (response.ok) {
       const stats = await response.json();
-      if (counters.length >= 2 && stats.repos) {
-        counters[1].dataset.counter = stats.repos;
+      if (counters.length >= 2 && stats.projects) {
+        counters[1].dataset.counter = stats.projects;
       }
     }
   } catch (error) {

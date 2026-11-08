@@ -4,7 +4,7 @@
 import { createElement, writeToClipboard } from "./utils.js";
 import { fetchGallery, openGalleryViewer } from "./gallery.js";
 
-const assetVersion = "20260916-1";
+const assetVersion = "20261108-1";
 
 export const renderSkills = (locale) => {
   const skills = document.querySelector("[data-skills]");
@@ -161,8 +161,11 @@ export const showProject = async ({ projectId, projects, locale, shouldScroll = 
       ${overview}
       ${caseStudy}
       <div class="project-actions">
-        <a class="button button--primary" href="${project.repo}" target="_blank" rel="noreferrer">${locale.projects.repo}</a>
-        <a class="button button--ghost" href="${project.release}" target="_blank" rel="noreferrer">${locale.projects.release}</a>
+        ${[
+          project.repo && { href: project.repo, label: locale.projects.repo, primary: true },
+          project.live && { href: project.live, label: locale.projects.live },
+          project.release && { href: project.release, label: locale.projects.release }
+        ].filter(Boolean).map((action) => `<a class="button ${action.primary ? "button--primary" : "button--ghost"}" href="${action.href}" target="_blank" rel="noreferrer">${action.label}</a>`).join("")}
       </div>
     </div>
     <div class="project-gallery">

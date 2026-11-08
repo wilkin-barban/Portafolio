@@ -7,7 +7,7 @@
         "pt": "GitHub"
       },
       "icon": "GH",
-      "href": "https://github.com/wilkinbarban/"
+      "href": "https://github.com/wilkin-barban/"
     },
     {
       "label": {
@@ -16,7 +16,7 @@
         "pt": "E-mail"
       },
       "icon": "@",
-      "href": "mailto:wilkin.barban@gmail.com"
+      "href": "mailto:barbanwilkin@gmail.com"
     },
     {
       "label": {
@@ -38,17 +38,25 @@
     "pix": "wilkin.barban@gmail.com"
   },
   "sharedSkills": [
-    "Python",
-    "Node.js",
+    "TypeScript",
     "JavaScript",
-    "HTML5",
-    "CSS3",
+    "Python",
+    "Kotlin",
+    "Node.js",
+    "React",
+    "Next.js",
+    "Electron",
+    "PostgreSQL",
+    "Supabase",
+    "SQLite",
+    "Redis",
     "Docker",
     "Linux",
-    "GitHub",
+    "Nginx",
     "APIs",
     "FFmpeg",
-    "Tkinter",
-    "UI/UX"
+    "RAG / IA",
+    "Git / GitHub",
+    "i18n / L10n"
   ]
 }

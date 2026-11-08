@@ -1,8 +1,16 @@
 {
   "name": "portfolio-wilkin",
-  "version": "1.0.0",
-  "description": "Portafolio personal profesional construido con Node.js, Express, HTML, CSS y JavaScript puro.",
+  "version": "1.1.0",
+  "description": "Portafolio profesional de Wilkin Barban: proyectos full-stack, IA, automatización, aplicaciones web y herramientas de escritorio.",
   "main": "src/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilkin-barban/Portafolio.git"
+  },
+  "homepage": "https://wilkinbarban.duckdns.org",
+  "bugs": {
+    "url": "https://github.com/wilkin-barban/Portafolio/issues"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "node src/server.js",

@@ -1,148 +1,115 @@
-# Portafolio Personal — Wilkin Barban
+# Portafolio — Wilkin Barban
 
-Sitio web y portafolio profesional de Wilkin Barban, desarrollado con una arquitectura ligera, modular y de alto rendimiento basada en **Node.js, Express, JavaScript nativo (ES6+), HTML5 y CSS3**.
+Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, HTML5, CSS3 y JavaScript nativo**. Presenta los proyectos actuales con casos de estudio, enlaces verificados y capturas reales, en **español, inglés y portugués**.
 
-El proyecto incluye soporte multilenguaje reactivo, visualizador interactivo de proyectos con galería dinámica, integración de widget de chat en tiempo real, tematización claro/oscuro, contenedorización con **Docker** y orquestación con **Nginx** como reverse proxy SSL multifuncional.
-
----
-
-## Características Principales
-
-- **Frontend Nativo y Rápido:** Construido sin frameworks pesados en cliente para garantizar máxima velocidad de carga, interactividad fluida y cero dependencias de bundling innecesarias.
-- **Soporte Multilenguaje Completo:** Traducciones integradas para **Español (ES)**, **Inglés (EN)** y **Portugués (PT)** con detección automática según el navegador y selector interactivo persistente.
-- **Tematización Dinámica:** Modos claro y oscuro con detección de preferencia del sistema y guardado de estado en almacenamiento local.
-- **Renderizado Dinámico de Proyectos:** Los casos de estudio, insignias tecnológicas, comandos de instalación de un clic y enlaces a repositorios se administran de forma desacoplada desde `public/js/app.js`.
-- **Galería de Capturas Inteligente:** Endpoint en backend (`/api/gallery/:project`) que detecta y ordena automáticamente las capturas en disco (`captura_1.png`, `captura_2.png`, etc.) con sanitización contra path traversal.
-- **Métricas de GitHub en Tiempo Real:** Integración con la API pública de GitHub (`/api/stats`) con sistema de caché en memoria de 1 hora para evitar rate limits.
-- **Infraestructura de Producción:** Configuración completa con Docker Compose y Nginx Reverse Proxy preparado para gestión automática de certificados SSL con Certbot / Let's Encrypt para múltiples dominios.
-- **Integración con Widget de Chat:** Conexión nativa con LiveChat Pro mediante WebSocket y scripts diferidos.
+> **Nuevo repositorio:** [github.com/wilkin-barban/Portafolio](https://github.com/wilkin-barban/Portafolio)  
+> **Sitio publicado:** [wilkinbarban.duckdns.org](https://wilkinbarban.duckdns.org)
 
 ---
 
-## Arquitectura y Estructura del Proyecto
+## Proyectos actuales
+
+| Proyecto | Qué es | Enlaces |
+|---|---|---|
+| **CRM Sofia Manager** | CRM omnichannel con IA, pedidos, stock, pagos y RAG para una operación de asados. Next.js, Supabase y Docker. | [Repo](https://github.com/wilkin-barban/CRM_Sofia_Manager) · [Demo](https://crmsofiamanager.duckdns.org) · [Release](https://github.com/wilkin-barban/CRM_Sofia_Manager/releases/latest) |
+| **Trindade Massas** | Operaciones de planta en web y Android: producción, higiene, temperatura, cargas, stock y ERP Aero32. | [Repo](https://github.com/wilkin-barban/Trindade) · [Demo](https://trindademasas.duckdns.org) · [Release](https://github.com/wilkin-barban/Trindade/releases/latest) |
+| **Super Chat Manager** | Chat en vivo auto-hospedado con widget, Telegram, panel, RAG y Docker. | [Repo](https://github.com/wilkin-barban/Super-Chat-Manager) · [Release](https://github.com/wilkin-barban/Super-Chat-Manager/releases/latest) |
+| **FF-Converter** | Conversor FFmpeg de escritorio para Windows y Linux, por lotes y con perfiles. | [Repo](https://github.com/wilkin-barban/FF-Converter) · [Release](https://github.com/wilkin-barban/FF-Converter/releases/latest) |
+| **pi-auto-compaction** | Compactación automática y configurable para agentes Pi, gentle-shell y herdr. | [Repo](https://github.com/wilkin-barban/pi-auto-compaction) · [Release](https://github.com/wilkin-barban/pi-auto-compaction/releases/latest) |
+| **Portafolio** | Este sitio: Express, i18n trilingüe, datos JSON, galería y Docker/Nginx. | [Repo](https://github.com/wilkin-barban/Portafolio) · [Demo](https://wilkinbarban.duckdns.org) · [Release](https://github.com/wilkin-barban/Portafolio/releases/latest) |
+
+---
+
+## Stack
+
+- **Backend:** Node.js + Express, API de salud, estadísticas de GitHub y galería dinámica.
+- **Frontend:** HTML5, CSS3, JavaScript ES Modules, i18n ES/EN/PT, temas claro/oscuro y partículas.
+- **Contenido:** `public/data/projects.json` + `public/locales/*.json`.
+- **Imágenes:** carpetas `public/<Proyecto>/captura_N.png`; el servidor valida la carpeta contra `projects.json`.
+- **Infraestructura:** Docker, Docker Compose, Nginx, Certbot/Let's Encrypt y healthchecks.
+
+## Estructura
 
 ```text
 .
-├── .gitignore              # Exclusiones de Git (dependencias, temporales, etc.)
-├── Agents.md               # Guía automatizada para agentes sobre integración de nuevos proyectos
-├── docker-compose.yml      # Definición de servicios (portfolio, nginx, certbot y redes)
-├── Dockerfile              # Imagen de producción basada en node:20-alpine
-├── nginx/                  # Configuraciones del proxy inverso Nginx
-│   ├── default.http.conf   # Servido HTTP y validación ACME de Let's Encrypt
-│   ├── default.https.conf  # Servido HTTPS con TLS 1.2/1.3, cabeceras seguras y upstreams
-│   └── select-config.sh    # Script de arranque para conmutar HTTP/HTTPS según certificados
-├── package.json            # Dependencias y scripts de Node.js
-├── public/                 # Archivos estáticos servidos por Express
-│   ├── assets/             # Favicon, covers y recursos gráficos
-│   ├── css/                # Estilos globales, diseño responsive y temas (webflow.css)
-│   ├── js/                 # Lógica cliente, estado, i18n y renderizado (app.js)
-│   ├── index.html          # Estructura principal y maquetación semántica
-│   └── <Nombre_Proyecto>/  # Directorios de capturas ordenadas para la galería de cada app
-└── src/
-    └── server.js           # Servidor Express, endpoints de API y cabeceras de seguridad
+├── public/
+│   ├── assets/              # favicon y og-cover.png 1280x640
+│   ├── css/                 # estilos y Webflow
+│   ├── data/                # projects.json + config.json
+│   ├── js/                  # app.js + módulos ES
+│   ├── locales/             # es.json, en.json, pt.json
+│   ├── index.html
+│   └── <Proyecto>/          # captura_1.png, captura_2.png, ...
+├── src/server.js            # Express, API y seguridad
+├── tests/                   # pruebas de datos, servidor y operación
+├── docker-compose.yml
+├── Dockerfile
+├── docs/
+│   ├── releases/v1.1.0.md
+│   └── operations/
+└── nginx/
 ```
 
----
+## Desarrollo local
 
-## Requisitos Previos
+```bash
+npm ci
+npm run check
+npm test
+npm start
+```
 
-- **Node.js**: versión 18 LTS o superior (recomendado Node.js 20+).
-- **npm**: versión 9 o superior.
-- **Docker** y **Docker Compose** (para ejecución o despliegue en contenedores).
+Abrí `http://localhost:3000` (o el `PORT` configurado).
 
----
+## Docker y despliegue
 
-## Ejecución en Entorno Local
+```bash
+docker compose up -d --build
+docker compose ps
+docker compose logs -f portfolio
+```
 
-1. **Instalar dependencias:**
-   ```bash
-   npm install
-   ```
+Servicios principales:
 
-2. **Verificar sintaxis y ejecutar pruebas automatizadas:**
-   ```bash
-   npm run check
-   npm test
-   ```
+- `portfolio-web`: Express en el puerto 80 interno.
+- `portfolio-nginx`: reverse proxy TLS y gateway de los dominios.
+- `portfolio-edge-observation-pruner`: retención de logs de observación.
 
-3. **Iniciar el servidor en modo desarrollo:**
-   ```bash
-   PORT=3000 npm run dev
-   ```
-   Abre tu navegador en `http://localhost:3000`.
+Dominios actuales:
 
----
+- `wilkinbarban.duckdns.org` — Portafolio y widget de Super Chat Manager.
+- `crmsofiamanager.duckdns.org` — CRM Sofia Manager.
+- `trindademasas.duckdns.org` — Trindade Massas.
 
-## Despliegue con Docker
+## Contenido y capturas
 
-El servicio está preparado para producción utilizando contenedores ligeros basados en Alpine Linux.
+1. Los metadatos técnicos viven en `public/data/projects.json`.
+2. Los textos y casos de estudio viven en `public/locales/es.json`, `en.json` y `pt.json`.
+3. Las capturas se guardan en `public/<folder>/captura_1.png`, `captura_2.png`, etc.
+4. La API `/api/gallery/:project` solo sirve carpetas autorizadas y ordena las capturas numéricamente.
 
-1. **Construir y levantar los contenedores:**
-   ```bash
-   docker compose up --build -d
-   ```
+La portada y las capturas de cada proyecto se actualizaron con las aplicaciones reales. La imagen social/OG está en `public/assets/og-cover.png` (1280×640).
 
-2. **Verificar estado de los contenedores:**
-   ```bash
-   docker compose ps
-   ```
+## Tests y CI
 
-3. **Consultar registros en tiempo real:**
-   ```bash
-   docker compose logs -f portfolio
-   ```
+```bash
+npm run check
+npm test
+```
 
-4. **Detener el entorno:**
-   ```bash
-   docker compose down
-   ```
+La suite cubre integridad de idiomas, metadatos, configuración, seguridad HTTP, galería autorizada, path traversal, health y fallback SPA. El workflow `.github/workflows/ci.yml` valida tests y build Docker en `main` y pull requests.
 
----
+## Release
 
-## Configuración de Dominios y Nginx
-
-El servicio Nginx incluido funciona como gateway central para los dominios gestionados bajo DuckDNS:
-
-- **`wilkinbarban.duckdns.org`**: Portafolio web y pasarela para LiveChat.
-- **`casadeasados.duckdns.org`**: Aplicación web y API Gateway.
-- **`trindademasas.duckdns.org`**: Sitio web Trindade.
-- **`wilkinbarban-music.duckdns.org`**: Servicio de streaming de audio privado (Navidrome).
-
-El script `nginx/select-config.sh` valida automáticamente la existencia de los certificados en `/etc/letsencrypt/live/`. Si existen, activa la configuración HTTPS (`default.https.conf`) con redirección de tráfico no seguro; en caso contrario, arranca en modo HTTP (`default.http.conf`) para permitir el desafío ACME (`/.well-known/acme-challenge/`).
-
----
-
-## Integración de Nuevos Proyectos
-
-Para agregar un nuevo caso de estudio al portafolio:
-
-1. **Registrar metadatos en `public/js/app.js`:**
-   Añade la definición en el array `projectMeta` (id, icono, carpeta de imágenes, URLs de repositorio y release).
-
-2. **Añadir textos en el diccionario `translations`:**
-   En cada idioma (`es`, `en`, `pt`), agrega dentro de `projects.projects` el objeto con:
-   - `name`, `subtitle`, `description`, `does`, `problem`.
-   - `caseStudy`: secciones estructuradas, métodos de instalación, pasos y comando de un clic.
-
-3. **Agregar capturas en `public/<Nombre_Carpeta>/`:**
-   Nombra los archivos secuencialmente: `captura_1.png`, `captura_2.png`, etc. La API de galería los consumirá y ordenará automáticamente.
-
-*(Para más detalles sobre este procedimiento asistido, consulta `Agents.md`).*
-
----
-
-## Variables de Entorno
-
-| Variable | Descripción | Valor por Defecto |
-| :--- | :--- | :--- |
-| `PORT` | Puerto de escucha del servidor Express | `80` (en contenedor) / configurable |
-| `NODE_ENV` | Entorno de ejecución (`development` o `production`) | `production` (en Docker) |
-
----
+La versión actual es **v1.1.0**. Las notas están en [`docs/releases/v1.1.0.md`](docs/releases/v1.1.0.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contacto
 
-- **Desarrollador:** Wilkin Barban
-- **Correo Electrónico:** [wilkin.barban@gmail.com](mailto:wilkin.barban@gmail.com)
-- **LinkedIn:** [linkedin.com/in/wilkin-barban-rosabal](https://www.linkedin.com/in/wilkin-barban-rosabal)
-- **GitHub:** [@wilkinbarban](https://github.com/wilkinbarban)
+- **GitHub:** [@wilkin-barban](https://github.com/wilkin-barban)
+- **Correo:** [barbanwilkin@gmail.com](mailto:barbanwilkin@gmail.com)
+- **LinkedIn:** [wilkin-barban-rosabal](https://www.linkedin.com/in/wilkin-barban-rosabal)
+- **Portafolio:** [wilkinbarban.duckdns.org](https://wilkinbarban.duckdns.org)
+
+## Licencia
+
+MIT. Consultá [`LICENSE`](LICENSE).
