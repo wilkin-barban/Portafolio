@@ -23,7 +23,7 @@ test("Verificar integridad de diccionarios de idioma (es, en, pt)", () => {
     });
 
     assert.ok(Array.isArray(json.projects?.projects), `projects.projects debe ser un array en ${lang}.json`);
-    assert.equal(json.projects.projects.length, 5, `Debe haber 5 proyectos configurados en ${lang}.json`);
+    assert.equal(json.projects.projects.length, 6, `Debe haber 6 proyectos configurados en ${lang}.json`);
   });
 });
 
@@ -33,7 +33,7 @@ test("Verificar archivo de metadatos projects.json", () => {
 
   const projects = JSON.parse(fs.readFileSync(filePath, "utf8"));
   assert.ok(Array.isArray(projects), "projects.json debe ser un array");
-  assert.equal(projects.length, 5, "Deben existir 5 proyectos");
+  assert.equal(projects.length, 6, "Deben existir 6 proyectos");
 
   projects.forEach((proj) => {
     assert.ok(proj.id, "Cada proyecto debe tener un id");
@@ -60,4 +60,30 @@ test("Verificar archivo de configuracion config.json", () => {
   assert.ok(config.supportTargets?.wise, "supportTargets debe contener wise");
   assert.ok(config.supportTargets?.pix, "supportTargets debe contener pix");
   assert.equal(config.supportTargets.pix, "wilkin.barban@gmail.com");
+});
+
+test("Segmenta está alineado en metadatos y capturas", () => {
+  const projects = JSON.parse(fs.readFileSync(path.join(publicDir, "data", "projects.json"), "utf8"));
+  const segmenta = projects.find((project) => project.id === "segmenta");
+
+  assert.ok(segmenta, "Segmenta debe existir en projects.json");
+  assert.equal(segmenta.icon, "SG");
+  assert.equal(segmenta.folder, "Segmenta");
+  assert.equal(segmenta.release, "https://github.com/wilkin-barban/Segmenta/releases/latest");
+
+  ["captura_1.png", "captura_2.png", "captura_3.png"].forEach((file) => {
+    assert.ok(fs.existsSync(path.join(publicDir, "Segmenta", file)), `Debe existir public/Segmenta/${file}`);
+  });
+});
+
+test("Segmenta está presente en los tres idiomas", () => {
+  ["es", "en", "pt"].forEach((lang) => {
+    const json = JSON.parse(fs.readFileSync(path.join(publicDir, "locales", `${lang}.json`), "utf8"));
+    const segmenta = json.projects.projects.find((project) => project.name === "Segmenta");
+
+    assert.ok(segmenta, `Segmenta debe existir en ${lang}.json`);
+    assert.ok(segmenta.subtitle, `Segmenta debe tener subtítulo en ${lang}.json`);
+    assert.ok(segmenta.caseStudy?.sections?.length >= 3, `Segmenta debe tener caso de estudio en ${lang}.json`);
+    assert.ok(json.skills.list.includes("Rust"), `Rust debe estar en habilidades de ${lang}.json`);
+  });
 });

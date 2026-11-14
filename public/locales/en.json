@@ -31,8 +31,8 @@
     "title": "A path of adaptation, learning and execution.",
     "paragraphs": [
       "I am a Cuban software developer based in Curitiba, Brazil, under refugee status. My path combines logistics management, self-taught learning and constant software engineering practice.",
-      "Today I build full-stack products and self-hosted systems: an omnichannel AI CRM, web/Android operations platforms, live chat, desktop tools and utilities for AI agents.",
-      "I focus on solving real problems with TypeScript, Node.js, Python, React/Next.js, Kotlin, PostgreSQL/Supabase, Docker and Linux, while caring about experience, security and maintainability.",
+      "Today I build full-stack products and self-hosted systems: an omnichannel AI CRM, web/Android operations platforms, live chat, a native download manager for Ubuntu, desktop tools and utilities for AI agents.",
+      "I focus on solving real problems with TypeScript, Node.js, Python, Rust, React/Next.js, Kotlin, GTK4/Libadwaita, PostgreSQL/Supabase, Docker and Linux, while caring about experience, security and maintainability.",
       "I believe technology is my best language for creating value: clear documentation, automated tests and reproducible deployments are part of the product."
     ],
     "timeline": [
@@ -49,6 +49,8 @@
       "JavaScript",
       "Python",
       "Kotlin",
+      "Rust",
+      "GTK4 / Libadwaita",
       "Node.js",
       "React",
       "Next.js",
@@ -115,6 +117,44 @@
           "commandLabel": "Copy command",
           "commandCopied": "Command copied",
           "command": "git clone https://github.com/wilkin-barban/CRM_Sofia_Manager.git && cd CRM_Sofia_Manager && docker compose up -d --build"
+        }
+      },
+      {
+        "name": "Segmenta",
+        "subtitle": "Native download manager for Ubuntu",
+        "description": "Segmented HTTP/HTTPS download manager with torrents, YouTube and public HLS/DASH for Ubuntu 26.04, with its own daemon, CLI, GTK4/Libadwaita GUI and browser extension.",
+        "does": "Splits downloads across up to 32 connections, resumes after closing the GUI or rebooting, captures browser downloads with confirmation and unifies HTTP, torrents and media in one queue.",
+        "problem": "Browsers lose long downloads when the tab closes, the session sleeps or the machine reboots; there is no single place to manage direct downloads, torrents and media.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Long downloads depended on an open tab, and there was no single queue for HTTP, torrents and media."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "Rust daemon with SQLite WAL and JSON-RPC over a Unix socket, segmented engine with hot-split and resume, GTK4/Libadwaita GUI, CLI, Chromium/Firefox extension and embedded yt-dlp."
+            },
+            {
+              "title": "Outcome",
+              "text": "Downloads survive the GUI and reboot, with real progress, queues, browser capture and an installable Ubuntu 26.04 .deb; v0.2.1 with green CI."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "Download the .deb from the release and enable segmenta.socket.",
+            "Build from the repository with Rust and package with cargo-deb."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Download segmenta_0.2.1-1_amd64.deb and verify its SHA-256.",
+            "Install with apt and run systemctl --user enable --now segmenta.socket.",
+            "Open Segmenta from the app menu or run segmenta-gui."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "git clone https://github.com/wilkin-barban/Segmenta.git && cd Segmenta && packaging/fetch-ytdlp.sh && cargo build --release --workspace"
         }
       },
       {

@@ -31,8 +31,8 @@
     "title": "Uma trajetória de adaptação, aprendizado e execução.",
     "paragraphs": [
       "Sou um desenvolvedor de software cubano radicado em Curitiba, Brasil, sob condição de refugiado. Minha trajetória combina gestão logística, aprendizado autodidata e prática constante de engenharia de software.",
-      "Hoje construo produtos full-stack e sistemas auto-hospedados: CRM omnichannel com IA, plataformas de operações web/Android, chat ao vivo, ferramentas desktop e utilitários para agentes de IA.",
-      "Foco em resolver problemas reais com TypeScript, Node.js, Python, React/Next.js, Kotlin, PostgreSQL/Supabase, Docker e Linux, cuidando da experiência, segurança e manutenibilidade.",
+      "Hoje construo produtos full-stack e sistemas auto-hospedados: CRM omnichannel com IA, plataformas de operações web/Android, chat ao vivo, um gerenciador de downloads nativo para Ubuntu, ferramentas desktop e utilitários para agentes de IA.",
+      "Foco em resolver problemas reais com TypeScript, Node.js, Python, Rust, React/Next.js, Kotlin, GTK4/Libadwaita, PostgreSQL/Supabase, Docker e Linux, cuidando da experiência, segurança e manutenibilidade.",
       "Acredito que a tecnologia é minha melhor linguagem para gerar valor: documentação clara, testes automatizados e deploys reproduzíveis fazem parte do produto."
     ],
     "timeline": [
@@ -49,6 +49,8 @@
       "JavaScript",
       "Python",
       "Kotlin",
+      "Rust",
+      "GTK4 / Libadwaita",
       "Node.js",
       "React",
       "Next.js",
@@ -115,6 +117,44 @@
           "commandLabel": "Copiar comando",
           "commandCopied": "Comando copiado",
           "command": "git clone https://github.com/wilkin-barban/CRM_Sofia_Manager.git && cd CRM_Sofia_Manager && docker compose up -d --build"
+        }
+      },
+      {
+        "name": "Segmenta",
+        "subtitle": "Gerenciador de downloads nativo para Ubuntu",
+        "description": "Gerenciador de downloads HTTP/HTTPS segmentado, torrents, YouTube e HLS/DASH públicos para Ubuntu 26.04, com daemon próprio, CLI, GUI GTK4/Libadwaita e extensão de navegador.",
+        "does": "Divide cada download em até 32 conexões, retoma após fechar a GUI ou reiniciar, captura downloads do navegador com confirmação e reúne HTTP, torrents e mídia em uma única fila.",
+        "problem": "O navegador perde downloads longos ao fechar a aba, suspender a sessão ou reiniciar; não existe um único lugar para controlar downloads diretos, torrents e mídia.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problema",
+              "text": "Downloads longos dependiam de uma aba aberta e não havia uma fila única para HTTP, torrents e mídia."
+            },
+            {
+              "title": "Solução implementada",
+              "text": "Daemon Rust com SQLite WAL e JSON-RPC em socket, motor segmentado com hot-split e retomada, GUI GTK4/Libadwaita, CLI, extensão Chromium/Firefox e yt-dlp embutido."
+            },
+            {
+              "title": "Resultado",
+              "text": "O download sobrevive à GUI e ao reinício, com progresso real, filas, captura do navegador e um .deb instalável no Ubuntu 26.04; v0.2.1 com CI verde."
+            }
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Baixar o .deb da release e habilitar segmenta.socket.",
+            "Compilar do repositório com Rust e empacotar com cargo-deb."
+          ],
+          "stepsTitle": "Passos recomendados",
+          "steps": [
+            "Baixar segmenta_0.2.1-1_amd64.deb e verificar o SHA-256.",
+            "Instalar com apt e executar systemctl --user enable --now segmenta.socket.",
+            "Abrir o Segmenta pelo menu ou executar segmenta-gui."
+          ],
+          "commandTitle": "Comando de um clique",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/Segmenta.git && cd Segmenta && packaging/fetch-ytdlp.sh && cargo build --release --workspace"
         }
       },
       {

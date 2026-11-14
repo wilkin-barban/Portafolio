@@ -1,6 +1,6 @@
 {
   "name": "portfolio-wilkin",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Portafolio profesional de Wilkin Barban: proyectos full-stack, IA, automatización, aplicaciones web y herramientas de escritorio.",
   "main": "src/server.js",
   "repository": {

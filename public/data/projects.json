@@ -8,6 +8,13 @@
     "live": "https://crmsofiamanager.duckdns.org"
   },
   {
+    "id": "segmenta",
+    "icon": "SG",
+    "folder": "Segmenta",
+    "repo": "https://github.com/wilkin-barban/Segmenta",
+    "release": "https://github.com/wilkin-barban/Segmenta/releases/latest"
+  },
+  {
     "id": "trindade",
     "icon": "TR",
     "folder": "Trindade",

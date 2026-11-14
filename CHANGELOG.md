@@ -4,6 +4,30 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.5] - 2026-11-14
+
+### Agregado
+
+- **Segmenta** como sexto proyecto: gestor de descargas nativo para Ubuntu 26.04 con HTTP
+  segmentado, torrents, YouTube y HLS/DASH; daemon Rust, CLI, GUI GTK4/Libadwaita y extensión de
+  navegador.
+- Tres capturas reales en `public/Segmenta/`: lista principal, progreso de descarga y preferencias.
+- Caso de estudio ES/EN/PT con problema, solución, resultado, métodos de instalación, pasos y
+  comando de compilación.
+- **Rust** y **GTK4 / Libadwaita** en el stack del portafolio y en las habilidades compartidas.
+
+### Cambiado
+
+- Contador de proyectos de 5 a 6 y metadatos de `projects.json` alineados con el perfil de GitHub.
+- `assetVersion` actualizado a `20261114-1` para invalidar caché de datos, locales y galerías.
+- README y estructura actualizados a `docs/releases/v1.1.5.md`.
+
+### Verificación
+
+- `npm run check` y `npm test` (26/26 tests OK).
+- Las tres capturas de Segmenta existen y la API de galería autoriza la carpeta.
+- CI y build Docker en verde.
+
 ## [1.1.4] - 2026-11-08
 
 ### Cambiado
@@ -93,6 +117,7 @@ El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y e
 - Galerías API validadas para los seis proyectos.
 - Build Docker y despliegue en `portfolio-web` verificados.
 
+[1.1.5]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.5
 [1.1.4]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.4
 [1.1.3]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.3
 [1.1.2]: https://github.com/wilkin-barban/Portafolio/releases/tag/v1.1.2

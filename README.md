@@ -12,6 +12,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 | Proyecto | Qué es | Enlaces |
 |---|---|---|
 | **CRM Sofia Manager** | CRM omnichannel con IA, pedidos, stock, pagos y RAG para una operación de asados. Next.js, Supabase y Docker. | [Repo](https://github.com/wilkin-barban/CRM_Sofia_Manager) · [Demo](https://crmsofiamanager.duckdns.org) · [Release](https://github.com/wilkin-barban/CRM_Sofia_Manager/releases/latest) |
+| **Segmenta** | Gestor de descargas nativo para Ubuntu 26.04: HTTP segmentado, torrents, YouTube y HLS/DASH; daemon Rust, GUI GTK4 y extensión de navegador. | [Repo](https://github.com/wilkin-barban/Segmenta) · [Release](https://github.com/wilkin-barban/Segmenta/releases/latest) |
 | **Trindade Massas** | Operaciones de planta en web y Android: producción, higiene, temperatura, cargas, stock y ERP Aero32. | [Repo](https://github.com/wilkin-barban/Trindade) · [Demo](https://trindademasas.duckdns.org) · [Release](https://github.com/wilkin-barban/Trindade/releases/latest) |
 | **Super Chat Manager** | Chat en vivo auto-hospedado con widget, Telegram, panel, RAG y Docker. | [Repo](https://github.com/wilkin-barban/Super-Chat-Manager) · [Release](https://github.com/wilkin-barban/Super-Chat-Manager/releases/latest) |
 | **FF-Converter** | Conversor FFmpeg de escritorio para Windows y Linux, por lotes y con perfiles. | [Repo](https://github.com/wilkin-barban/FF-Converter) · [Release](https://github.com/wilkin-barban/FF-Converter/releases/latest) |
@@ -44,7 +45,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs/
-│   ├── releases/v1.1.4.md
+│   ├── releases/v1.1.5.md
 │   └── operations/
 └── nginx/
 ```
@@ -100,7 +101,7 @@ La suite cubre integridad de idiomas, metadatos, configuración, seguridad HTTP,
 
 ## Release
 
-La versión actual es **v1.1.4**. Las notas están en [`docs/releases/v1.1.4.md`](docs/releases/v1.1.4.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
+La versión actual es **v1.1.5**. Las notas están en [`docs/releases/v1.1.5.md`](docs/releases/v1.1.5.md) y el historial en [`CHANGELOG.md`](CHANGELOG.md).
 
 ## Contacto
 

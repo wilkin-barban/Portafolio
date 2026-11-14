@@ -31,8 +31,8 @@
     "title": "Una trayectoria de adaptación, aprendizaje y ejecución.",
     "paragraphs": [
       "Soy un desarrollador de software de origen cubano, radicado en Curitiba, Brasil, bajo la condición de refugiado. Mi trayectoria combina gestión logística, aprendizaje autodidacta y una práctica constante de ingeniería de software.",
-      "Actualmente construyo productos full-stack y sistemas auto-hospedados: CRM omnicanal con IA, plataformas de operaciones web/Android, chat en vivo, herramientas de escritorio y utilidades para agentes de IA.",
-      "Me enfoco en resolver problemas reales con TypeScript, Node.js, Python, React/Next.js, Kotlin, PostgreSQL/Supabase, Docker y Linux, cuidando la experiencia, la seguridad y la mantenibilidad.",
+      "Actualmente construyo productos full-stack y sistemas auto-hospedados: CRM omnicanal con IA, plataformas de operaciones web/Android, chat en vivo, un gestor de descargas nativo para Ubuntu, herramientas de escritorio y utilidades para agentes de IA.",
+      "Me enfoco en resolver problemas reales con TypeScript, Node.js, Python, Rust, React/Next.js, Kotlin, GTK4/Libadwaita, PostgreSQL/Supabase, Docker y Linux, cuidando la experiencia, la seguridad y la mantenibilidad.",
       "Creo que la tecnología es mi mejor lenguaje para aportar valor: documentación clara, pruebas automatizadas y despliegues reproducibles forman parte del producto."
     ],
     "timeline": [
@@ -49,6 +49,8 @@
       "JavaScript",
       "Python",
       "Kotlin",
+      "Rust",
+      "GTK4 / Libadwaita",
       "Node.js",
       "React",
       "Next.js",
@@ -115,6 +117,44 @@
           "commandLabel": "Copiar comando",
           "commandCopied": "Comando copiado",
           "command": "git clone https://github.com/wilkin-barban/CRM_Sofia_Manager.git && cd CRM_Sofia_Manager && docker compose up -d --build"
+        }
+      },
+      {
+        "name": "Segmenta",
+        "subtitle": "Gestor de descargas nativo para Ubuntu",
+        "description": "Gestor de descargas HTTP/HTTPS segmentado, torrents, YouTube y HLS/DASH públicos para Ubuntu 26.04, con daemon propio, CLI, GUI GTK4/Libadwaita y extensión de navegador.",
+        "does": "Reparte cada descarga en hasta 32 conexiones, reanuda tras cerrar la GUI o reiniciar, captura descargas del navegador con confirmación y reúne HTTP, torrents y medios en una sola cola.",
+        "problem": "El navegador pierde descargas largas al cerrar la pestaña, suspender la sesión o reiniciar; no existe un único lugar para controlar descargas directas, torrents y medios.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problema",
+              "text": "Las descargas largas dependían de una pestaña abierta y no había una cola única para HTTP, torrents y medios."
+            },
+            {
+              "title": "Solución implementada",
+              "text": "Daemon Rust con SQLite WAL y JSON-RPC sobre socket, motor segmentado con hot-split y reanudación, GUI GTK4/Libadwaita, CLI, extensión Chromium/Firefox y yt-dlp embebido."
+            },
+            {
+              "title": "Resultado",
+              "text": "La descarga sobrevive a la GUI y al reinicio, con progreso real, colas, captura del navegador y un .deb instalable en Ubuntu 26.04; v0.2.1 con CI verde."
+            }
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Descargar el .deb desde la release y habilitar segmenta.socket.",
+            "Compilar desde el repo con Rust y empaquetar con cargo-deb."
+          ],
+          "stepsTitle": "Pasos recomendados",
+          "steps": [
+            "Descargar segmenta_0.2.1-1_amd64.deb y verificar el SHA-256.",
+            "Instalar con apt y ejecutar systemctl --user enable --now segmenta.socket.",
+            "Abrir Segmenta desde el menú o ejecutar segmenta-gui."
+          ],
+          "commandTitle": "Comando de un clic",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/Segmenta.git && cd Segmenta && packaging/fetch-ytdlp.sh && cargo build --release --workspace"
         }
       },
       {
