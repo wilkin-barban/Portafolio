@@ -308,6 +308,44 @@
           "commandCopied": "Comando copiado",
           "command": "git clone https://github.com/wilkin-barban/pi-auto-compaction.git && cd pi-auto-compaction && npm ci --ignore-scripts && npm run deploy -- --dry-run"
         }
+      },
+      {
+        "name": "Cauce",
+        "subtitle": "Conversor multimedia nativo para Ubuntu",
+        "description": "Conversor y orquestador multimedia por lotes para Ubuntu 26.04 con daemon propio en Rust, GUI moderna en GTK4/Libadwaita, SQLite WAL y 13 presets del sistema optimizados con FFmpeg.",
+        "does": "Administra conversiones de video y audio en segundo plano sobreviviendo al cierre de la GUI, inspecciona medios con ffprobe, provee 13 presets inmutables para Smart TV, web y audio, y monitorea telemetría en tiempo real.",
+        "problem": "Las herramientas de conversión tradicionales dependen de ventanas abiertas o interfaces web pesadas (Electron) que saturan la memoria y pierden los trabajos si la sesión se cierra.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problema",
+              "text": "Convertir lotes de video y audio en Linux requería comandos largos de terminal o interfaces Electron pesadas que no mantienen la cola viva si se cierra la ventana."
+            },
+            {
+              "title": "Solución implementada",
+              "text": "Arquitectura cliente-daemon en Rust con SQLite WAL, comunicación JSON-RPC sobre socket Unix, uso directo del FFmpeg/FFprobe del sistema y frontend nativo en GTK4 + Libadwaita."
+            },
+            {
+              "title": "Resultado",
+              "text": "Conversiones concurrentes con telemetría en tiempo real (FPS, velocidad, ETA), 13 presets calibrados, interfaz integrada al escritorio GNOME y paquete .deb para Ubuntu 26.04."
+            }
+          ],
+          "installTitle": "Método recomendado",
+          "methods": [
+            "Descargar el paquete .deb desde GitHub Releases y habilitar cauce.socket.",
+            "Compilar desde el código fuente con Rust y Cargo."
+          ],
+          "stepsTitle": "Pasos recomendados",
+          "steps": [
+            "Descargar cauce_0.1.0_amd64.deb desde la última release.",
+            "Instalar con sudo dpkg -i cauce_0.1.0_amd64.deb y activar systemctl --user enable --now cauce.socket.",
+            "Abrir Cauce desde el menú de aplicaciones o ejecutar cauce-gui."
+          ],
+          "commandTitle": "Comando de un clic",
+          "commandLabel": "Copiar comando",
+          "commandCopied": "Comando copiado",
+          "command": "git clone https://github.com/wilkin-barban/Cauce.git && cd Cauce && cargo build --release"
+        }
       }
     ],
     "live": "Ver en vivo"

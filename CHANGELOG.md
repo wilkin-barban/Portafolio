@@ -4,6 +4,25 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.6] - 2026-11-22
+
+### Agregado
+
+- **Cauce** como séptimo proyecto del portafolio: conversor multimedia nativo para Ubuntu 26.04 con daemon en Rust, GUI GTK4/Libadwaita, SQLite WAL y 13 presets con FFmpeg.
+- Tres capturas reales en `public/Cauce/`: vista de conversión, cola persistente y catálogo de presets.
+- Caso de estudio en español, inglés y portugués (ES/EN/PT).
+
+### Cambiado
+
+- Contador de proyectos en `index.html` incrementado de 6 a 7.
+- `assetVersion` actualizado a `20261122-1` en `projects.js` y metadatos de OpenGraph.
+- Versión del paquete a 1.1.6.
+
+### Verificación
+
+- `npm run check` y `npm test` pasando con 28/28 pruebas.
+- Validado con `verify-portfolio.sh`.
+
 ## [1.1.5] - 2026-11-14
 
 ### Agregado

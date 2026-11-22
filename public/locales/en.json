@@ -308,6 +308,44 @@
           "commandCopied": "Command copied",
           "command": "git clone https://github.com/wilkin-barban/pi-auto-compaction.git && cd pi-auto-compaction && npm ci --ignore-scripts && npm run deploy -- --dry-run"
         }
+      },
+      {
+        "name": "Cauce",
+        "subtitle": "Native batch multimedia converter for Ubuntu",
+        "description": "Native batch multimedia converter and orchestrator for Ubuntu 26.04 powered by a persistent Rust daemon, modern GTK4/Libadwaita GUI, SQLite WAL, and 13 tuned system presets using system FFmpeg.",
+        "does": "Manages video and audio conversions in the background surviving GUI closure, inspects media via ffprobe, provides 13 immutable presets for Smart TVs, web, and audio, and monitors real-time telemetry.",
+        "problem": "Traditional conversion tools rely on open windows or heavy web wrappers (Electron) that consume excessive memory and abort conversions if the desktop session closes.",
+        "caseStudy": {
+          "sections": [
+            {
+              "title": "Problem",
+              "text": "Batch media conversion on Linux required complex terminal pipelines or bloated Electron interfaces that cannot keep queues alive when the UI closes."
+            },
+            {
+              "title": "Implemented solution",
+              "text": "Client-daemon architecture in Rust with SQLite WAL persistence, JSON-RPC IPC over Unix sockets, system FFmpeg/FFprobe orchestration, and native GTK4 + Libadwaita desktop client."
+            },
+            {
+              "title": "Outcome",
+              "text": "Concurrent conversions with live telemetry (FPS, speed, ETA), 13 calibrated presets, seamless GNOME desktop integration, and a clean .deb package for Ubuntu 26.04."
+            }
+          ],
+          "installTitle": "Recommended method",
+          "methods": [
+            "Download the .deb package from GitHub Releases and enable cauce.socket.",
+            "Build from source using Rust and Cargo."
+          ],
+          "stepsTitle": "Recommended steps",
+          "steps": [
+            "Download cauce_0.1.0_amd64.deb from the latest release.",
+            "Install with sudo dpkg -i cauce_0.1.0_amd64.deb and enable systemctl --user enable --now cauce.socket.",
+            "Launch Cauce from the application menu or run cauce-gui."
+          ],
+          "commandTitle": "One-click command",
+          "commandLabel": "Copy command",
+          "commandCopied": "Command copied",
+          "command": "git clone https://github.com/wilkin-barban/Cauce.git && cd Cauce && cargo build --release"
+        }
       }
     ],
     "live": "Live demo"

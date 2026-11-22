@@ -42,5 +42,12 @@
     "folder": "pi_auto_compaction",
     "repo": "https://github.com/wilkin-barban/pi-auto-compaction",
     "release": "https://github.com/wilkin-barban/pi-auto-compaction/releases/latest"
+  },
+  {
+    "id": "cauce",
+    "icon": "CA",
+    "folder": "Cauce",
+    "repo": "https://github.com/wilkin-barban/Cauce",
+    "release": "https://github.com/wilkin-barban/Cauce/releases/latest"
   }
 ]
