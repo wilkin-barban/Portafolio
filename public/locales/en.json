@@ -137,7 +137,7 @@
             },
             {
               "title": "Outcome",
-              "text": "Downloads survive the GUI and reboot, with real progress, queues, browser capture and an installable Ubuntu 26.04 .deb; v0.2.1 with green CI."
+              "text": "Downloads survive the GUI and reboot, with real progress, queues, browser capture and an installable Ubuntu 26.04 .deb; v0.4.0 with green CI."
             }
           ],
           "installTitle": "Recommended method",
@@ -147,7 +147,7 @@
           ],
           "stepsTitle": "Recommended steps",
           "steps": [
-            "Download segmenta_0.2.1-1_amd64.deb and verify its SHA-256.",
+            "Download segmenta_0.4.0-1_amd64.deb and verify its SHA-256.",
             "Install with apt and run systemctl --user enable --now segmenta.socket.",
             "Open Segmenta from the app menu or run segmenta-gui."
           ],
