@@ -137,7 +137,7 @@
             },
             {
               "title": "Resultado",
-              "text": "O download sobrevive à GUI e ao reinício, com progresso real, filas, captura do navegador e um .deb instalável no Ubuntu 26.04; v0.6.0 com CI verde."
+              "text": "O download sobrevive à GUI e ao reinício, com progresso real, filas, captura do navegador e um .deb instalável no Ubuntu 26.04; v0.7.0 com CI verde."
             }
           ],
           "installTitle": "Método recomendado",
@@ -147,7 +147,7 @@
           ],
           "stepsTitle": "Passos recomendados",
           "steps": [
-            "Baixar segmenta_0.6.0-1_amd64.deb e verificar o SHA-256.",
+            "Baixar segmenta_0.7.0-1_amd64.deb e verificar o SHA-256.",
             "Instalar com apt e executar systemctl --user enable --now segmenta.socket.",
             "Abrir o Segmenta pelo menu ou executar segmenta-gui."
           ],
