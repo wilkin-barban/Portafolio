@@ -337,8 +337,8 @@
           ],
           "stepsTitle": "Pasos recomendados",
           "steps": [
-            "Descargar cauce_0.1.1-1_amd64.deb desde la última release.",
-            "Instalar con sudo dpkg -i cauce_0.1.1-1_amd64.deb y activar systemctl --user enable --now cauce.socket.",
+            "Descargar cauce_0.2.0-1_amd64.deb desde la última release.",
+            "Instalar con sudo dpkg -i cauce_0.2.0-1_amd64.deb y activar systemctl --user enable --now cauce.socket.",
             "Abrir Cauce desde el menú de aplicaciones o ejecutar cauce-gui."
           ],
           "commandTitle": "Comando de un clic",
