@@ -46,7 +46,7 @@ Portafolio profesional de **Wilkin Barban**, construido con **Node.js, Express, 
 ├── docker-compose.yml
 ├── Dockerfile
 ├── docs/
-│   ├── releases/v1.1.5.md
+│   ├── releases/v1.1.7.md
 │   └── operations/
 └── nginx/
 ```

@@ -4,6 +4,23 @@ Todos los cambios relevantes de este proyecto se documentan en este archivo.
 
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa versionado semántico.
 
+## [1.1.7] - 2026-11-27
+
+### Cambiado
+
+- Referencia de **Trindade Massas** sincronizada a **`v0.8.12`** en los diccionarios ES/EN/PT (`public/locales/{es,en,pt}.json`).
+- Imagen OpenGraph `public/assets/og-cover.png` regenerada a 1280×640 con los 7 proyectos actuales (incluyendo Cauce) y la referencia vigente `Trindade Massas v0.8.12`.
+- `assetVersion` actualizado a `20261127-1` en `public/js/modules/projects.js` y metadatos OpenGraph/Twitter/script en `public/index.html`.
+- Versión del paquete incrementada a `1.1.7` (`package.json` y `package-lock.json`) y documentación actualizada en `README.md` y `docs/releases/v1.1.7.md`.
+
+### Agregado
+
+- Test dedicado en `tests/data.test.js` verificando metadatos, capturas reales y consistencia de `Trindade Massas v0.8.12` en ES/EN/PT.
+
+### Verificación
+
+- `npm run check` y `npm test` pasando con **29/29** pruebas.
+
 ## [1.1.6] - 2026-11-22
 
 ### Agregado

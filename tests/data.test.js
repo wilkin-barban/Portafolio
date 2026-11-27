@@ -113,3 +113,26 @@ test("Cauce está presente en los tres idiomas", () => {
     assert.ok(json.skills.list.includes("Rust"), `Rust debe estar en habilidades de ${lang}.json`);
   });
 });
+
+test("Trindade está alineado en metadatos, capturas y versión v0.8.12", () => {
+  const projects = JSON.parse(fs.readFileSync(path.join(publicDir, "data", "projects.json"), "utf8"));
+  const trindade = projects.find((project) => project.id === "trindade");
+
+  assert.ok(trindade, "Trindade debe existir en projects.json");
+  assert.equal(trindade.icon, "TR");
+  assert.equal(trindade.folder, "Trindade");
+  assert.equal(trindade.release, "https://github.com/wilkin-barban/Trindade/releases/latest");
+
+  ["captura_1.png", "captura_2.png", "captura_3.png"].forEach((file) => {
+    assert.ok(fs.existsSync(path.join(publicDir, "Trindade", file)), `Debe existir public/Trindade/${file}`);
+  });
+
+  ["es", "en", "pt"].forEach((lang) => {
+    const json = JSON.parse(fs.readFileSync(path.join(publicDir, "locales", `${lang}.json`), "utf8"));
+    const tr = json.projects.projects.find((project) => project.name === "Trindade Massas");
+
+    assert.ok(tr, `Trindade Massas debe existir en ${lang}.json`);
+    const outcome = tr.caseStudy?.sections?.find((section) => /v0\.8\.12/.test(section.text));
+    assert.ok(outcome, `Trindade Massas debe referenciar v0.8.12 en ${lang}.json`);
+  });
+});
